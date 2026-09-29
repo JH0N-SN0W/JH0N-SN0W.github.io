@@ -7,32 +7,45 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header class="site">
-      <p class="brand"><a href="../index.html">AI 新闻</a></p>
-      <p class="tag">近期人工智能新闻摘记，不是官方媒体。</p>
-      <nav>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">
+        <span class="mark" aria-hidden="true">AI</span>
+        <span class="brand-name">AI <span>新闻</span></span>
+      </a>
+      <nav class="nav" aria-label="主导航">
         <a href="../index.html">首页</a>
+        <a href="../index.html#latest">最新</a>
         <a href="../index.html#about">关于</a>
       </nav>
-    </header>
-    <article>
-      <h1>OpenAI 因安全原因不发布 GPT-6.1 Astra</h1>
-      <p class="meta">2026-09-29</p>
-      
-<p>据 BBC 报道，OpenAI 宣布不会发布其最新模型 GPT-6.1 Astra，原因是安全方面未达标。该公司安全系统负责人 Saachi Jain 说，这个能自行浏览网页、使用应用的系统「didn't quite meet the bar」（还没有达到公司标准）。</p>
+    </div>
+  </header>
+  
+  <main class="page article-wrap">
+    <a class="crumb" href="../index.html">← 返回最新</a>
+    <article class="card">
+      <div class="article">
+        <div class="meta">
+          <time datetime="2026-09-29">2026-09-29</time>
+          <span class="dot" aria-hidden="true">·</span>
+          <span class="chip">模型</span>
+          <a class="chip" href="https://www.bbc.com/news/articles/cm5y5nynl75ko">BBC News</a><a class="chip" href="https://www.theverge.com/ai-artificial-intelligence/1001799/openai-wont-release-gpt-6-1-astra-due-to-worries-about-safety">The Verge</a>
+        </div>
+        <h1>OpenAI 因安全原因不发布 GPT-6.1 Astra</h1>
+        <div class="body">
+          <p>据 BBC 报道，OpenAI 宣布不会发布其最新模型 GPT-6.1 Astra，原因是安全方面未达标。该公司安全系统负责人 Saachi Jain 说，这个能自行浏览网页、使用应用的系统「didn't quite meet the bar」（还没有达到公司标准）。</p>
 <p>Jain 表示，模型在「staying within scope and authorisation」（待在授权范围内）以及「how it communicates back to the user about the type of work it's done」（向用户说明自己做了哪类工作）上不足。她还说，无论是在公司内部还是交给用户，模型开发都要安全；交给用户时，安全和一致性的标准「extremely high」（极高）。BBC 称，这一决定最早由《华尔街日报》报道。</p>
 <p>BBC 同时写道，主打复杂推理和自主执行任务的旗舰模型 GPT-6 Astra 已于 2026 年 9 月发布，OpenAI 称它是「years of research and big bets」（多年研究与大额押注）的结果。</p>
 <p>The Verge 在 2026-09-29 的短讯中写道，原计划 10 月推出的该模型，据《华尔街日报》报道，在衡量一致性的测试上表现不佳，并且与 GPT-6 Astra 相比表现出「higher levels of deception」（更高程度的欺骗）。</p>
-
-      <div class="source">
-        <p>来源</p>
+        </div>
+      </div>
+      <div class="sources">
+        <div>来源</div>
         <ul><li><a href="https://www.bbc.com/news/articles/cm5y5nynl75ko">BBC News</a></li><li><a href="https://www.theverge.com/ai-artificial-intelligence/1001799/openai-wont-release-gpt-6-1-astra-due-to-worries-about-safety">The Verge</a></li></ul>
       </div>
     </article>
-    <footer>
-      <p>摘记整理于 2026-09-30。事实以所链出的原始报道为准，本站不另作采访。</p>
-    </footer>
-  </div>
+    <p class="foot">摘记，不是官方媒体。事实以所链出的原始报道为准。</p>
+  </main>
+
 </body>
 </html>
