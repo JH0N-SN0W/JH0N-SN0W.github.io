@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img">
+<title>一组越来越短的横线，表示岗位可能减少的讨论</title>
+<rect width="100%" height="100%" fill="#f4efe6"/>
+<rect x="0" y="0" width="800" height="8" fill="#E3120B"/>
+<rect x="140" y="120" width="520" height="10" fill="#121212"/>
+<rect x="140" y="170" width="420" height="10" fill="#121212"/>
+<rect x="140" y="220" width="300" height="10" fill="#E3120B"/>
+<rect x="140" y="270" width="180" height="10" fill="#121212"/>
+<rect x="140" y="320" width="90" height="10" fill="#121212"/>
+</svg>

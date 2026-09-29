@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img">
+<title>深色方块上的一条红线，表示招股书里的风险警告</title>
+<rect width="100%" height="100%" fill="#f4efe6"/>
+<rect x="0" y="0" width="800" height="8" fill="#E3120B"/>
+<rect x="140" y="90" width="520" height="280" fill="#121212"/>
+<rect x="180" y="210" width="440" height="8" fill="#E3120B"/>
+<rect x="180" y="150" width="220" height="8" fill="#f4efe6"/>
+<rect x="180" y="250" width="160" height="8" fill="#f4efe6"/>
+</svg>
