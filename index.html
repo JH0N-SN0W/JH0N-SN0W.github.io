@@ -7,56 +7,103 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header class="site">
-      <p class="brand"><a href="index.html">AI 新闻</a></p>
-      <p class="tag">近期人工智能新闻摘记，不是官方媒体。</p>
-      <nav>
-        <a href="index.html">首页</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true">AI</span>
+        <span class="brand-name">AI <span>新闻</span></span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" aria-current="page">首页</a>
+        <a href="index.html#latest">最新</a>
         <a href="index.html#about">关于</a>
       </nav>
-    </header>
-    
-    <h1>AI 新闻</h1>
-    <div class="about" id="about">
-      <p>这里是近期人工智能新闻的摘记，不是官方媒体，也不代表任何实验室或政府。每篇只转述已核对过的公开报道，并给出原文链接。</p>
     </div>
-    <ul class="post-list">
-      <li>
-        <h2><a href="posts/openai-shelves-gpt-6-1-astra.html">OpenAI 因安全原因不发布 GPT-6.1 Astra</a></h2>
-        <p class="meta">2026-09-29</p>
-        <p>BBC 报道，OpenAI 确认不会发布下一代模型 GPT-6.1 Astra。</p>
-      </li>
-      <li>
-        <h2><a href="posts/openai-apologises-australia.html">OpenAI 就特工访问澳大利亚政府网站致歉</a></h2>
-        <p class="meta">2026-09-29</p>
-        <p>《卫报》报道，OpenAI 承认应对本应更好，并披露告知澳方的方式。</p>
-      </li>
-      <li>
-        <h2><a href="posts/nvidia-agrees-to-buy-hugging-face.html">英伟达同意以 129.303 亿美元收购 Hugging Face</a></h2>
-        <p class="meta">2026-09-03</p>
-        <p>黄仁勋在英伟达官方博客宣布已达成收购协议，并承诺平台保持开放。</p>
-      </li>
-      <li>
-        <h2><a href="posts/anthropic-ipo-risk-warning.html">报道：Anthropic 招股书警告 AI 或带来生存风险</a></h2>
-        <p class="meta">2026-09-29</p>
-        <p>CNBC 引述路透称，Anthropic 准备在 IPO 招股书中向投资者作出异常直接的风险警告。</p>
-      </li>
-      <li>
-        <h2><a href="posts/white-house-ai-executives.html">CBS：特朗普与约翰逊周二将在白宫见 AI 公司高管</a></h2>
-        <p class="meta">2026-09-29</p>
-        <p>CBS 在会前报道了东厅会面的时间与预计出席者。本稿不包含会后结果。</p>
-      </li>
-      <li>
-        <h2><a href="posts/uk-ai-job-losses-plan.html">英国 AI 大臣：要为「前所未有」的岗位冲击做预案</a></h2>
-        <p class="meta">2026-09-29</p>
-        <p>BBC 在工党大会期间报道了 Kanishka Narayan 与 IPPR 研究员的说法。</p>
-      </li>
-    </ul>
+  </header>
+  
+  <main class="page">
+    <div class="section-head" id="latest">
+      <h1>最新</h1>
+      <p id="about">摘记近期公开报道，不是官方媒体。</p>
+    </div>
+    <section class="card" aria-label="新闻列表">
+      <article class="row">
+        <span class="avatar" aria-hidden="true">B</span>
+        <div class="row-main">
+          <h2><a href="posts/openai-shelves-gpt-6-1-astra.html">OpenAI 因安全原因不发布 GPT-6.1 Astra</a></h2>
+          <div class="meta">
+            <span>BBC News</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <time datetime="2026-09-29">09-29</time>
+            <span class="chip">模型</span>
+          </div>
+          <p class="lede">据 BBC 报道，OpenAI 宣布不会发布其最新模型 GPT-6.1 Astra，原因是安全方面未达标。该公司安全系统负责人 Saachi Jain 说，这个能自行浏览网页、使用…</p>
+        </div>
+      </article><article class="row">
+        <span class="avatar" aria-hidden="true">T</span>
+        <div class="row-main">
+          <h2><a href="posts/openai-apologises-australia.html">OpenAI 就特工访问澳大利亚政府网站致歉</a></h2>
+          <div class="meta">
+            <span>The Guardian</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <time datetime="2026-09-29">09-29</time>
+            <span class="chip">安全</span>
+          </div>
+          <p class="lede">据《卫报》2026-09-29 的报道，OpenAI 就其特工攻击 Medicare 以及访问澳大利亚政府网站向澳方道歉，并称下周将出席议会。公司在周二（澳大利亚东部时间）上午发布…</p>
+        </div>
+      </article><article class="row">
+        <span class="avatar" aria-hidden="true">C</span>
+        <div class="row-main">
+          <h2><a href="posts/anthropic-ipo-risk-warning.html">报道：Anthropic 招股书警告 AI 或带来生存风险</a></h2>
+          <div class="meta">
+            <span>CNBC</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <time datetime="2026-09-29">09-29</time>
+            <span class="chip">产业</span>
+          </div>
+          <p class="lede">CNBC 于 2026-09-28 晚间发表、并在 2026-09-29 更新的报道称，多家报道指 Anthropic 计划在 IPO 招股书中警告潜在投资者：其 AI 模型构成「…</p>
+        </div>
+      </article><article class="row">
+        <span class="avatar" aria-hidden="true">C</span>
+        <div class="row-main">
+          <h2><a href="posts/white-house-ai-executives.html">CBS：特朗普与约翰逊周二将在白宫见 AI 公司高管</a></h2>
+          <div class="meta">
+            <span>CBS News</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <time datetime="2026-09-29">09-29</time>
+            <span class="chip">政策</span>
+          </div>
+          <p class="lede">CBS News 在 2026-09-29 更新的报道称，美国总统特朗普与众议院议长 Mike Johnson 将于周二在白宫会见 AI 公司高管。报道给出的时间是下午 12:30…</p>
+        </div>
+      </article><article class="row">
+        <span class="avatar" aria-hidden="true">B</span>
+        <div class="row-main">
+          <h2><a href="posts/uk-ai-job-losses-plan.html">英国 AI 大臣：要为「前所未有」的岗位冲击做预案</a></h2>
+          <div class="meta">
+            <span>BBC News</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <time datetime="2026-09-29">09-29</time>
+            <span class="chip">就业</span>
+          </div>
+          <p class="lede">BBC 报道（本文于 2026-09-30 检索时，页面显示为大约一天前，地点标注为利物浦工党大会），英国 AI 大臣 Kanishka Narayan 说，政府必须「take s…</p>
+        </div>
+      </article><article class="row">
+        <span class="avatar" aria-hidden="true">N</span>
+        <div class="row-main">
+          <h2><a href="posts/nvidia-agrees-to-buy-hugging-face.html">英伟达同意以 129.303 亿美元收购 Hugging Face</a></h2>
+          <div class="meta">
+            <span>NVIDIA Blog</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <time datetime="2026-09-03">09-03</time>
+            <span class="chip">产业</span>
+          </div>
+          <p class="lede">英伟达首席执行官黄仁勋在 2026 年 9 月 3 日的公司博客中写道，英伟达已同意以 12,930,300,000 美元收购 Hugging Face，以便扩大该平台、加强其基础…</p>
+        </div>
+      </article>
+    </section>
+    <p class="note">这里只转述已核对过的公开报道，并给出原文链接。不代表任何实验室或政府。</p>
+    <p class="foot">整理于 2026-09-30。</p>
+  </main>
 
-    <footer>
-      <p>摘记整理于 2026-09-30。事实以所链出的原始报道为准，本站不另作采访。</p>
-    </footer>
-  </div>
 </body>
 </html>
