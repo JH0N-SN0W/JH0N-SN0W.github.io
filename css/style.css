@@ -92,12 +92,20 @@ img { max-width: 100%; height: auto; display: block; }
 .article h1 { font-size: 2.15rem; line-height: 1.22; margin: 0.2rem 0 0.7rem; }
 .figure { margin: 1rem 0 1.2rem; }
 .figure img { width: 100%; border: 1px solid #e4ddd2; }
-.figure figcaption {
-  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", sans-serif;
+.figure figcaption, .cap {
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Noto Sans SC", sans-serif;
   font-size: 0.78rem;
   color: var(--muted);
   margin-top: 0.35rem;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 400;
+  line-height: 1.45;
 }
+.figure figcaption a, .cap a { color: var(--red); }
+.lead-media { min-width: 0; }
+.index-list li { align-items: start; }
+.index-list .cap { margin: 0.28rem 0 0; font-size: 0.68rem; }
 .body p { margin: 0 0 1rem; font-size: 1.08rem; }
 .body p:first-of-type::first-letter {
   float: left;
