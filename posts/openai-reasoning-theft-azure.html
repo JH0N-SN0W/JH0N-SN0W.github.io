@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI 称已阻止推理窃取活动，但 Azure 上仍可复现 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="toprule"></div>
+  <div class="wrap">
+    <header class="mast">
+      <p class="kicker">摘记 · 不是官方媒体</p>
+      <h1><a href="../index.html" style="text-decoration:none">Altaimobi今日早报</a></h1>
+      <p class="dateline">2026年10月2日</p>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a>
+        <a href="../archive/index.html">月份存档</a>
+        <a href="../index.html#about">关于</a>
+      </nav>
+    </header>
+<main class="article">
+  <p><a class="crumb" href="../index.html">返回首页</a></p>
+  <p class="section">安全</p>
+  <h1>OpenAI 称已阻止推理窃取活动，但 Azure 上仍可复现</h1>
+  <p class="byline">2026-10-01 · THE DECODER</p>
+  <figure class="figure">
+    <img src="../images/data-center-unc.svg" alt="机房内成排服务器机柜与线缆" width="360" height="480">
+    <figcaption>相关图片：数据中心机柜，用于示意云端模型托管；不是攻击现场。图片来源：Charles Barrineau / <a href="https://commons.wikimedia.org/wiki/File:Data_Center_2_(UNC).jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>（本站缩小）。</figcaption>
+  </figure>
+  <div class="body">
+    <p>THE DECODER 2026 年 10 月 1 日报道，OpenAI 称已侦测并瓦解一场针对其模型「受保护推理」（hidden reasoning）的协同「对抗蒸馏」活动；但研究人员发现，同类手法在微软 Azure 等云平台上仍持续奏效数周。</p><blockquote class="pull">「Same models, but different protections depending on which platform serves them」</blockquote><p>据该文转述 OpenAI 博客：活动自 7 月 1 日低量开始，7 月 24–25 日激增至逾 4000 用户发起约 1.6 万次请求；公司称到 7 月 28 日已关闭相关账户网络。攻击者据称把一次对话中的加密推理挪到另一次对话，再让同家族较弱模型当作「解密预言机」明文写出。研究者 Joachim Schaeffer 团队 9 月 13 日复测时，OpenAI 与 Anthropic 自有 API 已拦截该攻击，但在 Azure 上对包括 GPT-6 Astra 在内的 OpenAI 模型、以及至 Sonnet 5 的 Anthropic 模型仍可一次提取原文推理。文章称 OpenAI 到 9 月 27 日才为 Azure 端点补上防护，Anthropic 模型自 9 月 28 日起在 Azure 上亦难以复现；OpenAI 承认合作方托管模型需要同等保护，并称相关工作尚未完成。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul><li><a href="https://the-decoder.com/openai-says-it-stopped-a-campaign-to-steal-its-models-reasoning-but-the-trick-still-worked-on-azure/">THE DECODER</a></li></ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。事实以所链出的原始报道为准。</p>
+</main>
+  </div>
+</body>
+</html>
