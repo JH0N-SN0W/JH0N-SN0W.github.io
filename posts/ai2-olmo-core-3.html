@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ai2 发布 Olmo-core 3，提升大规模 MoE 训练效率 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="toprule"></div>
+  <div class="wrap">
+    <header class="mast">
+      <p class="kicker">摘记 · 不是官方媒体</p>
+      <h1><a href="../index.html" style="text-decoration:none">Altaimobi今日早报</a></h1>
+      <p class="dateline">2026年10月3日</p>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a>
+        <a href="../archive/index.html">月份存档</a>
+        <a href="../index.html#about">关于</a>
+      </nav>
+    </header>
+<main class="article">
+  <p><a class="crumb" href="../index.html">返回首页</a></p>
+  <p class="section">开源</p>
+  <h1>Ai2 发布 Olmo-core 3，提升大规模 MoE 训练效率</h1>
+  <p class="byline">2026-10-02 · SiliconANGLE</p>
+  <figure class="figure">
+    <img src="../images/allen-institute-seattle.svg" alt="西雅图 Allen Institute 大楼外景" width="360" height="240">
+    <figcaption>相关图片：西雅图 Allen Institute for Brain Science 大楼外景（与 Allen Institute for AI 同属保罗·艾伦科研体系），不是 Olmo-core 发布会。图片来源：Joe Mabel / <a href="https://commons.wikimedia.org/wiki/File:Allen_Institute_for_Brain_Science_Building_02.jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>。本站仅缩小尺寸。</figcaption>
+  </figure>
+  <div class="body">
+    <p>SiliconANGLE 2026 年 10 月 2 日报道，西雅图 Allen Institute for AI（Ai2）发布面向大规模语言模型的训练框架 Olmo-core 3，称可显著提升 mixture-of-experts（MoE）大模型的训练效率，并在控制成本的前提下把 MoE 训练推向万亿参数规模。</p><blockquote class="pull">「allows MoE training to reach the trillion-parameter scale while keeping costs low」</blockquote><p>稿件解释，MoE 与稠密模型不同：每生成一个 token 只激活少量专家子网络，从而降低算力，但仍须把完整专家池存放在 GPU 内存并协调专家间通信。Olmo-core 3 将专家池从 8 扩到 128，同时每 token 仍只选 4 个专家；在同一基础设施上可使 LLM 总参数超过 1 万亿。</p><p>基准方面，Ai2 称在 Nvidia B3000 GPU 上，对 470 亿参数模型可达每秒约 5.2 万 token，约为 Megatron-core 约 1.94 万 token/秒的 2.7 倍。架构要点包括专家并行、按层切分以降低单卡内存，以及分布式优化器状态；并支持 MXFP8 低比特格式以减少计算与卡间数据搬运。项目与相关系统已在 GitHub 向开源社区开放。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul><li><a href="https://siliconangle.com/2026/10/02/ai2-releases-olmo-core-3-to-make-developing-large-mixture-of-experts-llms-more-efficient/">SiliconANGLE</a></li></ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。事实以所链出的原始报道为准。</p>
+</main>
+  </div>
+</body>
+</html>
