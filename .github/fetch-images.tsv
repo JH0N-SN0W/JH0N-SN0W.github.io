@@ -1,4 +1,11 @@
-# path<TAB>Wikimedia Commons URL<TAB>optional crop (x0,y0,x1,y1 as fractions). License of each file is verified on its Commons page and credited in the article caption.
-# 2026-10-05 batch 1 (already fetched): jay-clayton, starcraft-tournament-2011, hangzhou-skyline, tsmc-fab-18, amazon-datacenter, apple-park-visitor-center, meta-hq-menlo-park, australia-parliament-house
-images/openai-pioneer-building.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Pioneer_Building%2C_San_Francisco_%282019%29_-1.jpg/1920px-Pioneer_Building%2C_San_Francisco_%282019%29_-1.jpg
-images/vatican-st-peters-square.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/St_Peter%27s_Square%2C_Vatican_City_-_April_2007.jpg/1920px-St_Peter%27s_Square%2C_Vatican_City_-_April_2007.jpg
+# path	Wikimedia Commons URL	optional crop (x0,y0,x1,y1 as fractions). License of each file is verified on its Commons page and credited in the article caption.
+# 2026-10-06 batch
+images/sydney-opera-house-bridge.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Sydney_Opera_House_and_Harbour_Bridge%2C_southeast_view_20230224_1.jpg/1920px-Sydney_Opera_House_and_Harbour_Bridge%2C_southeast_view_20230224_1.jpg
+images/berlaymont-brussels.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Berlaymont_building_2015.jpg/1920px-Berlaymont_building_2015.jpg
+images/times-square-night-2025.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Times_Square%2C_NYC_at_night_-_August_2025.jpg/1920px-Times_Square%2C_NYC_at_night_-_August_2025.jpg
+images/brooklyn-skyline.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Brooklyn_Skyline_from_Lower_Manhattan_017.jpg/1920px-Brooklyn_Skyline_from_Lower_Manhattan_017.jpg	0,0.1,1,0.8
+images/pentagon-aerial.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Aerial_photograph_of_the_Pentagon.jpg/1920px-Aerial_photograph_of_the_Pentagon.jpg
+images/silicon-wafer-450mm.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Dan_Hutcheson%2C_semiconductor_industry_analyst_and_CEO_of_VLSI_Research_holds_up_a_450mm_silicon_wafer.jpg/1920px-Dan_Hutcheson%2C_semiconductor_industry_analyst_and_CEO_of_VLSI_Research_holds_up_a_450mm_silicon_wafer.jpg
+images/qualcomm-hq-la-jolla.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Qualcomm_Headquarters_La_Jolla.jpg/1920px-Qualcomm_Headquarters_La_Jolla.jpg	0,0,1,0.8
+images/tiktok-hq-culver-city.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/TikTok_Headquarters.jpg/1920px-TikTok_Headquarters.jpg	0,0.05,1,0.88
+images/sam-altman-2019.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg/1920px-Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg	0,0.04,1,0.58
