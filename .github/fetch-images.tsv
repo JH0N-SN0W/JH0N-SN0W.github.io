@@ -1,11 +1,10 @@
 # path	Wikimedia Commons URL	optional crop (x0,y0,x1,y1 as fractions). License of each file is verified on its Commons page and credited in the article caption.
-# 2026-10-06 batch
-images/sydney-opera-house-bridge.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Sydney_Opera_House_and_Harbour_Bridge%2C_southeast_view_20230224_1.jpg/1920px-Sydney_Opera_House_and_Harbour_Bridge%2C_southeast_view_20230224_1.jpg
-images/berlaymont-brussels.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Berlaymont_building_2015.jpg/1920px-Berlaymont_building_2015.jpg
-images/times-square-night-2025.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Times_Square%2C_NYC_at_night_-_August_2025.jpg/1920px-Times_Square%2C_NYC_at_night_-_August_2025.jpg
-images/brooklyn-skyline.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Brooklyn_Skyline_from_Lower_Manhattan_017.jpg/1920px-Brooklyn_Skyline_from_Lower_Manhattan_017.jpg	0,0.1,1,0.8
-images/pentagon-aerial.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Aerial_photograph_of_the_Pentagon.jpg/1920px-Aerial_photograph_of_the_Pentagon.jpg
-images/silicon-wafer-450mm.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Dan_Hutcheson%2C_semiconductor_industry_analyst_and_CEO_of_VLSI_Research_holds_up_a_450mm_silicon_wafer.jpg/1920px-Dan_Hutcheson%2C_semiconductor_industry_analyst_and_CEO_of_VLSI_Research_holds_up_a_450mm_silicon_wafer.jpg
-images/qualcomm-hq-la-jolla.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Qualcomm_Headquarters_La_Jolla.jpg/1920px-Qualcomm_Headquarters_La_Jolla.jpg	0,0,1,0.8
-images/tiktok-hq-culver-city.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/TikTok_Headquarters.jpg/1920px-TikTok_Headquarters.jpg	0,0.05,1,0.88
-images/sam-altman-2019.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg/1920px-Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg	0,0.04,1,0.58
+# 2026-10-07 batch
+images/wikimedia-servers-2015.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Wikimedia_Foundation_Servers_2015.jpg/1920px-Wikimedia_Foundation_Servers_2015.jpg
+images/starmer-mensch-2025.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Prime_Minister_Keir_Starmer_meets_Arthur_Mensch_%2854256710173%29.jpg/1920px-Prime_Minister_Keir_Starmer_meets_Arthur_Mensch_%2854256710173%29.jpg
+images/dario-amodei-disrupt-2023.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Dario_Amodei_at_TechCrunch_Disrupt_2023_04.jpg/1920px-Dario_Amodei_at_TechCrunch_Disrupt_2023_04.jpg
+images/googleplex-outside-2017.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Outside_Googleplex_in_Mountain_View%2C_California.jpg/1920px-Outside_Googleplex_in_Mountain_View%2C_California.jpg
+images/lisa-su-ornl-2019.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/AMD_CEO_Lisa_Su_speaking_at_ORNL_2019-05-07.jpg/1920px-AMD_CEO_Lisa_Su_speaking_at_ORNL_2019-05-07.jpg
+images/government-complex-seoul.jpg	https://upload.wikimedia.org/wikipedia/commons/7/75/Government_Complex_Seoul_Main_Building.jpg
+images/ias-fuld-hall.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Fuld_Hall%2C_Institute_for_Advanced_Study%2C_Princeton%2C_NJ_-_looking_north.jpg/1920px-Fuld_Hall%2C_Institute_for_Advanced_Study%2C_Princeton%2C_NJ_-_looking_north.jpg
+images/accra-skyline-2019.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Accra_Skyline.jpg/1920px-Accra_Skyline.jpg
