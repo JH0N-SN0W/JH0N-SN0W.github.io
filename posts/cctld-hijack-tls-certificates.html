@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>攻击者劫持 .gh、.sl、.as 三个国家顶级域，为谷歌等大公司域名骗取 TLS 证书，Chrome 已拦截 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="toprule"></div>
+  <div class="wrap">
+    <header class="mast">
+      <p class="kicker">摘记 · 不是官方媒体</p>
+      <h1><a href="../index.html" style="text-decoration:none">Altaimobi今日早报</a></h1>
+      <p class="dateline">2026年10月7日</p>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a>
+        <a href="../archive/index.html">月份存档</a>
+        <a href="../index.html#about">关于</a>
+      </nav>
+    </header>
+<main class="article">
+  <p><a class="crumb" href="../index.html">返回首页</a></p>
+  <p class="section">安全</p>
+  <h1>攻击者劫持 .gh、.sl、.as 三个国家顶级域，为谷歌等大公司域名骗取 TLS 证书，Chrome 已拦截</h1>
+  <p class="byline">2026-10-06 · Google 官方博客 · Ars Technica</p>
+  <figure class="figure">
+    <img src="../images/accra-skyline-2019.jpg" alt="加纳首都阿克拉的城市天际线" width="1600" height="1067">
+    <figcaption>相关图片：加纳首都阿克拉的天际线（2019 年拍摄）。.gh 是加纳的国家顶级域名；本图与这次攻击本身没有直接关系。图片来源：Synth85 / <a href="https://commons.wikimedia.org/wiki/File:Accra_Skyline.jpg">维基共享资源</a>，作者本人作品，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>谷歌 Chrome 安全团队 2026 年 10 月 6 日在官方博客披露，上周发现 .gh（加纳）、.sl（塞拉利昂）和 .as（美属萨摩亚）三个国家和地区顶级域名遭到一系列劫持。谷歌称，这些事件并非谷歌系统被攻破，而是第三方顶级域注册管理机构被攻破，令所有以 .gh、.sl、.as 结尾的域名都处于风险之中。</p><p>谷歌说，攻击者在劫持期间修改了权威 DNS 记录，并为「several Google domains」以及其他机构的域名拿到了未经授权的 HTTPS 证书；由于攻击方式的特点，谷歌认为签发这些证书的证书颁发机构（CA）没有做错什么。Ars Technica 解释说，控制了 DNS 记录，攻击者就能通过自动化的域名控制验证，持有这类证书便可以在密码学意义上冒充相关网站。</p><blockquote class="pull">「browser-side intervention should not be relied on to protect your users」</blockquote><p>谷歌称已通过 CRLSets 在 Chrome 中立即封锁涉及谷歌的未授权证书，并与签发 CA 合作吊销；之后从证书透明度（CT）日志中又发现了包括「several leading global brands and widely used online services」在内的更多受影响机构，也一并在 Chrome 中封锁。Chrome 用户无需操作，但谷歌提醒：「browser-side intervention should not be relied on to protect your users」，它无法保证找到了所有受影响域名，Chrome 的拦截也保护不了非 Chrome 用户。</p><p>谷歌建议域名所有者持续监控所有域名的 CT 日志，并发布带 ACME 账户绑定的严格 CAA 记录，防止攻击者在 DNS 控制权恢复后利用缓存的验证结果继续签发证书。Ars Technica 称，谷歌没有点名受影响的自家域名或其他机构，未授权证书的数量也不清楚。本稿只转述已核对的公开报道。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul><li><a href="https://blog.google/security/chromes-response-to-recent-cctld-registry-hijacks/">Google 官方博客</a></li><li><a href="https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/">Ars Technica</a></li></ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。事实以所链出的原始报道为准。</p>
+</main>
+  </div>
+</body>
+</html>
