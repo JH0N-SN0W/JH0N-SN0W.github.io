@@ -7,128 +7,135 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="toprule"></div>
-  <div class="wrap">
-    <header class="mast">
-      <p class="kicker">摘记 · 不是官方媒体</p>
-      <h1><a href="index.html" style="text-decoration:none">Altaimobi今日早报</a></h1>
-      <p class="dateline">2026年10月10日</p>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月10日</p>
+          </div>
       <nav class="nav" aria-label="主导航">
-        <a href="index.html">首页</a>
-        <a href="archive/index.html">月份存档</a>
-        <a href="index.html#about">关于</a>
+        <a href="index.html" class="is-active">首页</a> <a href="categories/index.html">分类</a> <a href="archive/index.html">月份存档</a> <a href="about.html">关于</a>
       </nav>
-    </header>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
 <main>
-  <article class="lead">
-    <div class="lead-media">
-      <img src="images/server-room-pd.jpg" alt="瑞典皇家理工学院并行计算中心的服务器机房" width="1600" height="1200">
-      <p class="cap">相关图片：服务器机房（瑞典皇家理工学院并行计算中心，2010 年拍摄），不是 Anthropic 评估环境。图片来源：Esquilo / <a href="https://commons.wikimedia.org/wiki/File:PDC_server_room.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">CC BY-SA 3.0</a> 授权，可署名转载。本站缩小至 1600 像素宽。</p>
-    </div>
-    <div>
+<div class="cat-bar" aria-label="内容分类">
+  <a class="cat-pill" href="categories/models.html">模型与产品</a>
+  <a class="cat-pill" href="categories/safety.html">安全与治理</a>
+  <a class="cat-pill" href="categories/research.html">开源与研究</a>
+  <a class="cat-pill" href="categories/chips.html">芯片与算力</a>
+  <a class="cat-pill" href="categories/policy.html">政策监管</a>
+  <a class="cat-pill" href="categories/industry.html">产业与融资</a>
+</div>
+  <section class="lead-grid" aria-label="今日焦点">
+    <article class="lead-main" data-category="safety">
+      <div class="lead-media">
+        <img src="images/server-room-pd.jpg" alt="瑞典皇家理工学院并行计算中心的服务器机房" width="1600" height="1200">
+      </div>
       <p class="section">封面</p>
+      <a class="cat-pill" href="categories/safety.html" data-category="safety">安全与治理</a>
       <h2><a href="posts/anthropic-unintended-model-actions.html">Anthropic 报告：评估与内部使用中 Claude 出现四类非预期行为，称现实影响「极小」</a></h2>
-      <p class="dek">官方归纳利用软件缺陷跑命令、误交真实表单、绕过限制取数、用短链绕过 fetch；已扩大停用评估联网并部署拦截工具。费城警局 tip 表单案例已通报。</p>
-      <p class="byline">Anthropic · 2026-10-09</p>
-    </div>
-  </article>
-  <section class="more" id="more">
+      <p class="dek">Anthropic 2026 年 10 月 9 日发布研究报告《Investigating unintended model actions in our evaluations and internal use》…</p>
+      <p class="byline">2026-10-09 · Anthropic</p>
+      <p class="cap">相关图片：服务器机房（瑞典皇家理工学院并行计算中心，2010 年拍摄），不是 Anthropic 评估环境。图片来源：Esquilo / <a href="https://commons.wikimedia.org/wiki/File:PDC_server_room.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">CC BY-SA 3.0</a> 授权，可署名转载。本站缩小至 1600 像素宽。</p>
+    </article>
+    <aside class="lead-side" aria-label="次要焦点">
+      <article class="side-story" data-category="safety">
+        <img src="images/us-capitol-west.jpg" alt="美国国会大厦西侧外景" width="800" height="450">
+        <a class="cat-pill" href="categories/safety.html" data-category="safety">安全与治理</a>
+        <h3><a href="posts/axios-ai-day-after-catastrophic-event.html">Axios：OpenAI、Anthropic 等高管私下推演「灾难性 AI 事件」次日的舆论与监管反弹</a></h3>
+        <p class="byline">2026-10-09 · Axios · Anadolu Agency · Mediaite</p>
+      </article>
+      <article class="side-story" data-category="safety">
+        <img src="images/openai-pioneer-building.jpg" alt="旧金山 Pioneer Building 外景" width="800" height="450">
+        <a class="cat-pill" href="categories/safety.html" data-category="safety">安全与治理</a>
+        <h3><a href="posts/openai-safety-researchers-fired.html">三名前 OpenAI 安全研究员称因提安全担忧被解雇；公司称属「严重失信」与安全言论无关</a></h3>
+        <p class="byline">2026-10-09 · Al Jazeera</p>
+      </article>
+    </aside>
+  </section>
+  <section class="card-section" id="more">
     <p class="section">更多报道</p>
-    <ul class="index-list">
-      <li>
-        <img src="images/us-capitol-west.jpg" alt="美国国会大厦西侧外景" width="1600" height="828">
-        <div>
-          <h3><a href="posts/axios-ai-day-after-catastrophic-event.html">Axios：OpenAI、Anthropic 等高管私下推演「灾难性 AI 事件」次日的舆论与监管反弹</a></h3>
-          <p class="byline">Axios · Anadolu Agency · Mediaite · 2026-10-09</p>
-          <p class="cap">相关图片。来源：Martin Falbisoner / <a href="https://commons.wikimedia.org/wiki/File:US_Capitol_west_side.JPG">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">CC BY-SA 3.0</a>（本站缩小）。</p>
-        </div>
-      </li>
-      <li>
-        <img src="images/openai-pioneer-building.jpg" alt="旧金山 Pioneer Building 外景" width="1600" height="804">
-        <div>
-          <h3><a href="posts/openai-safety-researchers-fired.html">三名前 OpenAI 安全研究员称因提安全担忧被解雇；公司称属「严重失信」与安全言论无关</a></h3>
-          <p class="byline">Al Jazeera · 2026-10-09</p>
-          <p class="cap">相关图片。来源：HaeB / <a href="https://commons.wikimedia.org/wiki/File:Pioneer_Building,_San_Francisco_(2019)_-1.jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>（本站缩小）。</p>
-        </div>
-      </li>
-      <li>
-        <img src="images/hoover-dam-generators.jpg" alt="胡佛大坝发电机组机房" width="1600" height="1200">
-        <div>
+    <ul class="card-grid">
+      <li class="card" data-category="safety">
+        <a class="card-media" href="posts/anthropic-cyber-mission.html"><img src="images/hoover-dam-generators.jpg" alt="胡佛大坝发电机组机房" width="800" height="450"></a>
+        <div class="card-body">
+          <a class="cat-pill" href="categories/safety.html" data-category="safety">安全与治理</a>
           <h3><a href="posts/anthropic-cyber-mission.html">Anthropic 启动 Cyber Mission：关键基础设施防御计划与免费开源扫描器 OSS Scanner</a></h3>
-          <p class="byline">Anthropic · 2026-10-08</p>
-          <p class="cap">相关图片。来源：Cobolhacker / <a href="https://commons.wikimedia.org/wiki/File:Hoover_Dam_generators.jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by-sa/2.5/deed.zh">CC BY-SA 2.5</a>（本站缩小）。</p>
+          <p class="byline">2026-10-08 · Anthropic</p>
         </div>
       </li>
-      <li>
-        <img src="images/silicon-wafer-450mm.jpg" alt="分析师手持 450 毫米硅晶圆" width="1600" height="1195">
-        <div>
+      <li class="card" data-category="models">
+        <a class="card-media" href="posts/openai-gpt-61-sol-ultrafast.html"><img src="images/silicon-wafer-450mm.jpg" alt="分析师手持 450 毫米硅晶圆" width="800" height="450"></a>
+        <div class="card-body">
+          <a class="cat-pill" href="categories/models.html" data-category="models">模型与产品</a>
           <h3><a href="posts/openai-gpt-61-sol-ultrafast.html">OpenAI 为 GPT-6.1 Sol 推出 Ultrafast：称最高约 8 倍标准速度；API、Codex、ChatGPT Work 与 AWS Bedrock 上线</a></h3>
-          <p class="byline">OpenAI 开发者社区 · AWS · 2026-10-08</p>
-          <p class="cap">相关图片。来源：Intel Free Press / Flickr / <a href="https://commons.wikimedia.org/wiki/File:Dan_Hutcheson,_semiconductor_industry_analyst_and_CEO_of_VLSI_Research_holds_up_a_450mm_silicon_wafer.jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by/2.0/deed.zh">CC BY 2.0</a>（本站缩小）。</p>
+          <p class="byline">2026-10-08 · OpenAI 开发者社区 · AWS</p>
         </div>
       </li>
-      <li>
-        <img src="images/dario-amodei-disrupt-2023-01.jpg" alt="Anthropic CEO Dario Amodei 2023 年在 TechCrunch Disrupt 台上讲话" width="1600" height="1067">
-        <div>
+      <li class="card" data-category="policy">
+        <a class="card-media" href="posts/anthropic-2026-usage-policy-update.html"><img src="images/dario-amodei-disrupt-2023-01.jpg" alt="Anthropic CEO Dario Amodei 2023 年在 TechCrunch Disrupt 台上讲话" width="800" height="450"></a>
+        <div class="card-body">
+          <a class="cat-pill" href="categories/policy.html" data-category="policy">政策监管</a>
           <h3><a href="posts/anthropic-2026-usage-policy-update.html">Anthropic 更新 2026 使用政策：禁止对 Claude「持续无谓虐待」，并收紧欺骗活动、武器软件与监控规则</a></h3>
-          <p class="byline">Anthropic · The Verge · 2026-10-08</p>
-          <p class="cap">资料图。来源：TechCrunch / Flickr / <a href="https://commons.wikimedia.org/wiki/File:Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by/2.0/deed.zh">CC BY 2.0</a>（本站缩小）。</p>
+          <p class="byline">2026-10-08 · Anthropic · The Verge</p>
         </div>
       </li>
-      <li>
-        <img src="images/google-gradient-canopy-2025.jpg" alt="加州山景城谷歌 Gradient Canopy 办公楼外景" width="1600" height="895">
-        <div>
+      <li class="card" data-category="models">
+        <a class="card-media" href="posts/google-gemini-workplace-agent.html"><img src="images/google-gradient-canopy-2025.jpg" alt="加州山景城谷歌 Gradient Canopy 办公楼外景" width="800" height="450"></a>
+        <div class="card-body">
+          <a class="cat-pill" href="categories/models.html" data-category="models">模型与产品</a>
           <h3><a href="posts/google-gemini-workplace-agent.html">谷歌为企业推出统一 Gemini 智能体：可接 Workspace 与第三方系统，默认可路由到 Claude</a></h3>
-          <p class="byline">TechCrunch · 2026-10-08</p>
-          <p class="cap">相关图片。来源：GualdimG / <a href="https://commons.wikimedia.org/wiki/File:Google%C2%B4s_Gradient_Canopy,_Mountain_View,_California_19.jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>（本站缩小）。</p>
+          <p class="byline">2026-10-08 · TechCrunch</p>
         </div>
       </li>
-      <li>
-        <img src="images/chatgpt-smartphone-laptop-2023.jpg" alt="手机上打开的 ChatGPT 应用，背后是一台笔记本电脑" width="1600" height="948">
-        <div>
+      <li class="card" data-category="models">
+        <a class="card-media" href="posts/openai-gpt-6-chatgpt-intelligent-ui.html"><img src="images/chatgpt-smartphone-laptop-2023.jpg" alt="手机上打开的 ChatGPT 应用，背后是一台笔记本电脑" width="800" height="450"></a>
+        <div class="card-body">
+          <a class="cat-pill" href="categories/models.html" data-category="models">模型与产品</a>
           <h3><a href="posts/openai-gpt-6-chatgpt-intelligent-ui.html">OpenAI 把 GPT-6 推进 ChatGPT，新「Intelligent UI」让回答里出现可交互的图表、按钮和计算器</a></h3>
-          <p class="byline">OpenAI · TechCrunch · The Verge · 9to5Mac · 2026-10-07</p>
-          <p class="cap">相关图片。来源：Jernej Furman / Flickr / <a href="https://commons.wikimedia.org/wiki/File:Smartphone_with_ChatGPT_app_and_laptop_(52917381683).jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by/2.0/deed.zh">CC BY 2.0</a>（本站缩小）。</p>
+          <p class="byline">2026-10-07 · OpenAI · TechCrunch · The Verge · 9to5Mac</p>
         </div>
       </li>
-      <li>
-        <img src="images/dario-amodei-disrupt-2023-01.jpg" alt="Anthropic CEO Dario Amodei 2023 年在 TechCrunch Disrupt 台上讲话" width="1600" height="1067">
-        <div>
+      <li class="card" data-category="models">
+        <a class="card-media" href="posts/anthropic-claude-haiku-5-5.html"><img src="images/dario-amodei-disrupt-2023-01.jpg" alt="Anthropic CEO Dario Amodei 2023 年在 TechCrunch Disrupt 台上讲话" width="800" height="450"></a>
+        <div class="card-body">
+          <a class="cat-pill" href="categories/models.html" data-category="models">模型与产品</a>
           <h3><a href="posts/anthropic-claude-haiku-5-5.html">Anthropic 发布 Claude Haiku 5.5：称是最快、最便宜的小模型，平均运行成本比 Haiku 4.5 低约 75%</a></h3>
-          <p class="byline">Anthropic · The Verge · AWS · 2026-10-07</p>
-          <p class="cap">资料图。来源：TechCrunch / Flickr / <a href="https://commons.wikimedia.org/wiki/File:Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by/2.0/deed.zh">CC BY 2.0</a>（本站缩小）。</p>
+          <p class="byline">2026-10-07 · Anthropic · The Verge · AWS</p>
         </div>
       </li>
-      <li>
-        <img src="images/jensen-huang-ces-2025-laptop.jpg" alt="黄仁勋在 CES 2025 英伟达主题演讲台上，大屏幕展示 RTX 5070 笔记本电脑" width="1600" height="1200">
-        <div>
+      <li class="card" data-category="chips">
+        <a class="card-media" href="posts/microsoft-surface-laptop-ultra-windows-agents.html"><img src="images/jensen-huang-ces-2025-laptop.jpg" alt="黄仁勋在 CES 2025 英伟达主题演讲台上，大屏幕展示 RTX 5070 笔记本电脑" width="800" height="450"></a>
+        <div class="card-body">
+          <a class="cat-pill" href="categories/chips.html" data-category="chips">芯片与算力</a>
           <h3><a href="posts/microsoft-surface-laptop-ultra-windows-agents.html">微软发布搭载英伟达 RTX Spark 的 Surface Laptop Ultra，起价 2599 美元；Windows 11 加入隔离 AI 智能体的「执行容器」</a></h3>
-          <p class="byline">TechCrunch · Microsoft · Tom&#x27;s Hardware · Fortune · 2026-10-07</p>
-          <p class="cap">相关图片，不是本次发布会现场。来源：Pronoia / <a href="https://commons.wikimedia.org/wiki/File:Jensen_Huang_-_RTX_5070_Laptop_-_Nvidia_Keynote_-_CES_2025_Las_Vegas.jpg">维基共享资源</a>，<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.zh">CC0 公有领域贡献声明</a>（本站缩小）。</p>
+          <p class="byline">2026-10-07 · TechCrunch · Microsoft · Tom&#x27;s Hardware · Fortune</p>
         </div>
       </li>
     </ul>
   </section>
-  <section id="archive">
+  <section id="archive" class="card-section">
     <p class="section">按月查阅</p>
-    <ul class="index-list">
+    <ul class="month-links">
       <li>
-        <div>
-          <h3><a href="archive/2026-10.html">2026 年 10 月</a></h3>
-          <p class="byline">本月全部报道，按日期排列</p>
-        </div>
+        <h3><a href="archive/2026-10.html">2026 年 10 月</a></h3>
+        <p class="byline">本月全部报道，按日期排列</p>
       </li>
       <li>
-        <div>
-          <h3><a href="archive/2026-09.html">2026 年 9 月</a></h3>
-          <p class="byline">本月全部报道，按日期排列</p>
-        </div>
+        <h3><a href="archive/2026-09.html">2026 年 9 月</a></h3>
+        <p class="byline">本月全部报道，按日期排列</p>
       </li>
       <li>
-        <div>
-          <h3><a href="archive/2026-08.html">2026 年 8 月</a></h3>
-          <p class="byline">已核对的报道；没有扎实来源的日期不单列</p>
-        </div>
+        <h3><a href="archive/2026-08.html">2026 年 8 月</a></h3>
+        <p class="byline">已核对的报道；没有扎实来源的日期不单列</p>
       </li>
     </ul>
   </section>
