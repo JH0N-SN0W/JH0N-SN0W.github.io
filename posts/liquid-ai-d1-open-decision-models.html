@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liquid AI 开源 d1 决策模型：d1-3B 与 d1-omni-600M，单次前向给出校准答案 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月12日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>Liquid AI 开源 d1 决策模型：d1-3B 与 d1-omni-600M，单次前向给出校准答案</h1>
+  <p class="byline">2026-10-07 · Liquid AI · Hugging Face</p>
+  <figure class="figure">
+    <img src="../images/raspberry-pi-4-side.svg" alt="树莓派 4 Model B 侧视，示意边缘设备" width="1600" height="941">
+    <figcaption>相关图片：树莓派 4 Model B 侧视，示意边缘侧决策推理硬件，不是 Liquid AI 官方产品图。图片来源：Michael H.（Laserlicht） / <a href="https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_Model_B_-_Side.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽并封装为 SVG，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>Liquid AI 于 2026 年 10 月 7 日宣布开源其 d1 决策模型家族中的两个权重：面向文本与图像的 d1-3B，以及实验性的多模态 d1-omni-600M（文本+图像，或文本+音频）。与生成式大模型不同，d1 不产出 token，而是在单次前向传播中直接给出结构化决策答案。</p>
+    <p>官方称，d1-3B 在公开 Decision Index v0.2.1 上得分 48.57，领先所有 10B 以下模型，并与约 12 倍参数量的 Decider 35B-A3B 相当；在 RTX 4090 上单题约 8 毫秒，Jetson AGX Thor 约 16 毫秒，Jetson Orin Nano 约 50 毫秒。七项公开文本基准均值上，d1-3B 为 82.9，高于 Decider 4B 的 81.1；d1-omni-600M 均值为 78.4，超过 Decider 2B 的 77.1，参数量约为其四分之一。</p>
+    <blockquote class="pull">d1-3B 在 RTX 4090 上单题约 8 毫秒；Decision Index v0.2.1 公开分割得分 48.57。</blockquote>
+    <p>架构上，d1-3B 基于 LFM2.5-VL-3B 视觉语言模型骨干；d1-omni-600M 基于双向编码器 LFM2.5-Encoder-350M，并分阶段加入音频与视觉。权重已在 Hugging Face 提供，文档说明可用 transformers（需 trust_remote_code）本地加载；公司亦与英伟达合作展示 Jetson 与 Isaac Sim 场景。本稿数字以 Liquid AI 博客与 Hugging Face 发布页为准。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://www.liquid.ai/blog/d1-open">Liquid AI：Open d1: Edge decision models for text, vision, and audio</a></li>
+      <li><a href="https://huggingface.co/blog/LiquidAI/open-d1">Hugging Face Blog：Multimodal open d1 decision models for the edge</a></li>
+      <li><a href="https://huggingface.co/LiquidAI/d1-3B">Hugging Face：LiquidAI/d1-3B</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。事实以所链出的原始报道为准。</p>
+</main>
+  </div>
+</body>
+</html>
