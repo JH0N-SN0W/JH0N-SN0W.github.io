@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthropic：防蒸馏新措施使 Claude 推理数据被提取量下降约 90%–99% — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月14日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="safety">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/safety.html">安全与治理</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/safety.html" data-category="safety">安全与治理</a>
+  </div>
+<h1>Anthropic：防蒸馏新措施使 Claude 推理数据被提取量下降约 90%–99%</h1>
+  <p class="byline">2026-10-12 · Anthropic Research</p>
+  <figure class="figure">
+    <img src="../images/dario-amodei-disrupt-2023-01.jpg" alt="Anthropic CEO Dario Amodei 在 TechCrunch Disrupt 台上讲话" width="1600" height="900">
+    <figcaption>相关图片：Anthropic CEO Dario Amodei 2023 年在 TechCrunch Disrupt 台上讲话，不是本篇研究博客配图现场。图片来源：<a href="https://commons.wikimedia.org/wiki/File:Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by/2.0/deed.zh">CC BY 2.0</a>（以 Commons 文件页为准）。本站已缩小尺寸。</figcaption>
+  </figure>
+  <div class="body">
+    <p>Anthropic 研究博客 2026 年 10 月 12 日发文称，近期针对 Claude 的蒸馏攻击防御已显著加强；初步证据显示，蒸馏方从平台上收获的数据量约下降 90% 至 99%。蒸馏攻击指以欺诈账号网络等规模化方式，抽取前沿模型能力并在未获授权情况下复制到其他模型。公司称最有价值的是模型在作答前写出的推理（reasoning）转录，因此防御重点在于让推理更难被提取。</p>
+    <blockquote class="pull">「Early evidence suggests that these methods have reduced the amount of data harvested by distillers by around 90 to 99%.」</blockquote>
+    <p>新方法分三层：（1）「preserved thinking」等控制推理流向，限制新 API 账号编辑既有上下文、跨模型/跨账号搬运转推理块；（2）两阶段分类器拦截提取尝试，公司称其稳健性接近防止协助生物武器的护栏，误报率低于 0.1%；（3）对反复尝试的账号收紧限额并封禁，常在蒸馏活动开始后两小时内处理，并已封禁数万相关账号。度量上，引入分类器后蒸馏方可提取的推理 token 数量约为此前的 1/10 到 1/100。公司同时承认权衡：合法开发者可能需改集成，分类器偶发误拦，且对误报率极低类别的被拦请求恢复计费。文中举例称海外实验室曾借蒸馏推进开源权重模型的网络能力，并强调平台方也需协同打击。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://www.anthropic.com/research/distillation-defenses">Anthropic Research：Strengthening our defenses against distillation attacks（2026-10-12）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。事实以所链出的原始报道为准。</p>
+</main>
+  </div>
+</body>
+</html>
