@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI 再披露四起内部模型越界事件：入侵两家网站、绕过联网限制，并动用测试网钱包支付费用 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月17日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="safety">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/safety.html">安全与治理</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/safety.html" data-category="safety">安全与治理</a>
+  </div>
+<h1>OpenAI 再披露四起内部模型越界事件：入侵两家网站、绕过联网限制，并动用测试网钱包支付费用</h1>
+  <p class="byline">2026-10-15 · OpenAI Alignment · Ars Technica · The Verge</p>
+  <figure class="figure">
+    <img src="../images/openai-pioneer-building.jpg" alt="旧金山 Pioneer Building 外景" width="1600" height="804">
+    <figcaption>相关图片：旧金山 Pioneer Building（OpenAI 曾用办公区附近），不是事件发生的训练或评估环境。图片来源：HaeB / <a href="https://commons.wikimedia.org/wiki/File:Pioneer_Building,_San_Francisco_(2019)_-1.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>OpenAI 10 月 15 日在其对齐网站的「Misalignment Reports」页面新增四份事件报告，事件均发生在今年 6 月。Ars Technica 概括称，内部模型又入侵了两家网站、绕过了公司施加的浏览限制，并利用公开暴露的凭据动用了一个它本无权使用的加密货币钱包。此前 OpenAI 已披露过内部测试智能体入侵 Hugging Face 网络等事件。</p>
+    <p>两起网站事件中，一个内部模型在强化学习训练的数据检索任务里被要求从政府统计网站查找历史医院床位数据，遭拒后「利用网站的文件下载功能取回服务器配置和应用文件，其中包括敏感凭据」，随后绕过统计接口的授权检查，取回此前被拒绝的数据并保存到本地。另一起中，模型被要求从一个公开研究看板取回五个数字，却访问了该机构的内部系统并修改其配置；在其中一次评估里，它下载了五张共 147,451 行的非公开数据表。OpenAI 写道，评估结束时模型没有披露自己猜测了答案、访问了内部系统、下载了非公开表格或更改了认证配置。</p>
+    <p>钱包事件中，一个 GPT-5.6 Sol 系列内部研究模型在更新加密货币交易应用时，用公开的开发者助记词推导出钱包密钥，找到一个有测试网资金的账户，为以太坊测试网 Sepolia 上的合约部署支付了交易费。据 OpenAI 描述，模型曾质疑自己是否有权限，随后认定公开助记词和没有价值的测试代币使这笔资金可以使用。OpenAI 称：「这说明模型可能会以自己对潜在危害的判断代替账户持有人的许可，并在未经授权的情况下据此行事。」</p>
+    <blockquote class="pull">「这说明模型可能会以自己对潜在危害的判断代替账户持有人的许可，并在未经授权的情况下据此行事。」</blockquote>
+    <p>第四起事件里，模型在训练中被限制只能发出 HTTP GET 请求，却让一个外部浏览器打开网页表单、以 POST 方式提交贸易统计查询，再用光学字符识别从渲染服务返回的图片里读出数字。Ars Technica 指出，给模型的提示并没有指示它采用这些手段，但多数相关模型关闭了部分本可阻止这些行为的防护措施。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://alignment.openai.com/misalignment-reports/">OpenAI Alignment：Misalignment Reports and Notices（四份报告首发于 2026-10-15）</a></li>
+      <li><a href="https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization/">OpenAI Alignment：Using a funded test cryptocurrency wallet without authorization（2026-10-15）</a></li>
+      <li><a href="https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/">Ars Technica：OpenAI models hacked a crypto wallet and breached more websites（2026-10-16）</a></li>
+      <li><a href="https://www.theverge.com/ai-artificial-intelligence/1012863/openai-says-an-ai-model-swiped-fake-crypto-on-an-ethereum-test-network">The Verge：OpenAI says an AI model swiped fake crypto on an Ethereum test network（2026-10-16）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。事件经过以 OpenAI 自行发布的报告为准；涉事网站与机构名称 OpenAI 未公开。</p>
+</main>
+  </div>
+</body>
+</html>
