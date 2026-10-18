@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Reflection AI 发布首个开放权重模型 Beam，称以更少算力对标中国开源模型 — Altaimobi今日早报</title>
+  <title>Reflection：Beam 权重已上线 Hugging Face，Apache 2.0，5010 亿参数 MoE（激活 230 亿）— Altaimobi今日早报</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
           <div class="brand">
             <p class="kicker">摘记 · 不是官方媒体</p>
             <h1><a href="../index.html">Altaimobi今日早报</a></h1>
-            <p class="dateline">2026年10月6日</p>
+            <p class="dateline">2026年10月19日</p>
           </div>
       <nav class="nav" aria-label="主导航">
         <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
@@ -36,20 +36,27 @@
   <div class="article-meta">
     <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
   </div>
-<h1>Reflection AI 发布首个开放权重模型 Beam，称以更少算力对标中国开源模型</h1>
-  <p class="byline">2026-10-05 · TechCrunch · Reuters（CNA 转载） · Reflection</p>
+<h1>Reflection：Beam 权重已上线 Hugging Face，Apache 2.0；5010 亿参数稀疏 MoE、激活 230 亿、百万 token 上下文</h1>
+  <p class="byline">2026-10-16（更新） · Reflection · Hugging Face</p>
   <figure class="figure">
     <img src="../images/brooklyn-skyline.jpg" alt="从曼哈顿下城望向布鲁克林天际线" width="1600" height="840">
-    <figcaption>相关图片：从曼哈顿下城望向布鲁克林天际线（Reflection AI 总部所在地），不是产品照。图片来源：Kidfly182 / <a href="https://commons.wikimedia.org/wiki/File:Brooklyn_Skyline_from_Lower_Manhattan_017.jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>。本站裁切为横幅并缩小至 1600 像素宽，处理后的副本仍为 CC BY-SA 4.0。</figcaption>
+    <figcaption>相关图片：从曼哈顿下城望向布鲁克林天际线（Reflection AI 总部所在地），不是产品照。图片来源：Kidfly182 / <a href="https://commons.wikimedia.org/wiki/File:Brooklyn_Skyline_from_Lower_Manhattan_017.jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>。本站缩小至 1600 像素宽，处理后的副本仍为 CC BY-SA 4.0。</figcaption>
   </figure>
   <div class="body">
-    <p>TechCrunch 2026 年 10 月 5 日报道，总部位于布鲁克林、成立两年的 Reflection AI 正式发布首个前沿开放权重模型 Beam。这是一个纯文本混合专家（MoE）模型，总参数 5010 亿、每次激活 230 亿，预训练 23.8 万亿 token，上下文窗口 100 万 token。</p><p>路透社同日报道，Reflection 称 Beam 与智谱 Z.ai 的 GLM-5.2 相当，并在编程和智能体任务上逼近 Qwen3.8-Max；作为对比，GLM-5.2 总参数约 7440 亿、激活 400 亿。TechCrunch 指出，这些性能说法尚未经独立验证；公司称 Beam 推理算力消耗少「3-4x」。</p><blockquote class="pull">这些性能说法尚未经独立验证</blockquote><p>据 TechCrunch，Reflection 由两名前 Google DeepMind 研究员于 2024 年创立，按 PitchBook 数据已融资约 47 亿美元，投资方包括英伟达、红杉和 Lightspeed，上一轮投前估值 250 亿美元；公司计划本月公开 Beam 的权重和完整技术细节。本稿只转述已核对的公开报道。</p>
+    <p>Reflection 10 月 16 日发布《Beam is now available》，宣布其首个开放权重模型 Beam 的权重已在 Hugging Face 以 Apache 2.0 许可发布，并附模型卡与《Beam Safety Technical Report》。Beam 为稀疏混合专家（MoE）架构：总参数 5010 亿、每次激活约 230 亿，面向编程、推理与长程智能体任务，上下文窗口 100 万 token。权重提供 BF16、FP8 与 NVFP4 等精度，并附带投机解码草稿模型。</p>
+    <blockquote class="pull">「公司称模型是『智能体开放操作系统』的内核，配套超过 40 家伙伴与推理、微调、强化学习配方。」</blockquote>
+    <p>Hugging Face 同日博客介绍了 day-0 的 transformers、vLLM、SGLang 支持及后训练食谱。Reflection 称开发者可自托管、评估、定制并接入智能体系统；亦可通过 Reflection 平台与 AWS、Google Cloud、Together、Fireworks、NVIDIA NIM、Ollama 等伙伴端点使用。10 月 5 日前后公司已预告 Beam；本次重点是权重与文档正式开放。基准数字见模型卡，本稿不逐项转述未独立复核的分数。</p>
   </div>
   <div class="sources">
     <p class="section">来源</p>
-    <ul><li><a href="https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/">TechCrunch</a></li><li><a href="https://www.channelnewsasia.com/business/nvidia-backed-reflection-unveils-first-ai-model-take-chinese-open-models-6434466">Reuters（CNA 转载）</a></li><li><a href="https://reflection.ai/blog/introducing-beam">Reflection 博客</a></li></ul>
+    <ul>
+      <li><a href="https://reflection.ai/blog/beam-is-available">Reflection：Beam is now available（2026-10-16）</a></li>
+      <li><a href="https://huggingface.co/blog/reflection-beam">Hugging Face Blog：Welcome Beam（2026-10-16）</a></li>
+      <li><a href="https://huggingface.co/reflection/Beam-1.0-501B-A23B">Hugging Face：reflection/Beam-1.0-501B-A23B</a></li>
+      <li><a href="https://www.reflection.ai/blog/introducing-beam">Reflection：Introducing Beam（较早预告）</a></li>
+    </ul>
   </div>
-  <p class="foot">摘记，不是官方媒体。事实以所链出的原始报道为准。</p>
+  <p class="foot">摘记，不是官方媒体。架构与许可以 Reflection / Hugging Face 页面为准；性能数字为发布方自述。</p>
 </main>
   </div>
 </body>
