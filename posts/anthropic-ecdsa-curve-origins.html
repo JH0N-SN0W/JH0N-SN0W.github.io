@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthropic：Claude 溯源 NIST 椭圆曲线种子为 lrand48 加 Unix 时间戳，非加密破解 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月20日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>Anthropic：Claude 溯源 NIST 椭圆曲线种子为 lrand48 加 Unix 时间戳，非加密破解</h1>
+  <p class="byline">2026-10-16 · Anthropic Research</p>
+  <figure class="figure">
+    <img src="../images/pure-mathematics-formulae-blackboard.jpg" alt="黑板上的数学公式示意" width="1600" height="1200">
+    <figcaption>相关图片：黑板上的数学公式示意（资料图），与 NIST 曲线种子溯源无直接关系。图片来源：Wallpoper / <a href="https://commons.wikimedia.org/wiki/File:Pure-mathematics-formul%C3%A6-blackboard.jpg">维基共享资源</a>，据 Commons 页面称该作品已进入公有领域（PD）。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>Anthropic 10 月 16 日发布《Claude reveals ECDSA curve origins》，称内部研究模型在约半小时内找出 NIST P-192、P-224、P-256、P-384、P-521 等曲线种子的生成方式。公司强调：这不是对 ECDSA 曲线的密码学破解或新攻击，多数研究者本已信任这些曲线；读者「无需采取任何行动」。</p>
+    <p>长期悬念在于：NIST FIPS 186-2 公布的曲线种子由 NSA 提供却无公开出处，引发后门疑虑，并催生业余调查与悬赏。旧传闻称 Jerry Solinas 用幽默口令哈希生成种子；Anthropic 称该方向被证伪。Claude 发现这些种子并非哈希结果，而是 C 库 <code>lrand48</code> 伪随机数生成器在以 Unix 时间戳初始化（<code>srand48</code>）后输出的候选值。例如 P-256 种子对应 1997 年 8 月 16 日一次运行中的第 1842 个候选。</p>
+    <blockquote class="pull">「这不是密码学破解、新攻击，或 ECDSA 曲线的弱点。事实上，这让我们更确信这些曲线并非被故意植入后门。」</blockquote>
+    <p>方法上，Claude 扫描种子中是否出现 1990 年代常见 PRNG 的连续输出特征，识别出 <code>lrand48</code> 只返回 48 位状态高 31 位的签名，并用格基约化等方法恢复截断线性同余发生器状态；反向步进至 <code>srand48</code> 形态后，十个素数域种子均对应 1997 年 5 月至 1998 年 4 月的 Unix 时间戳。部分基点（含 P-192 与若干 ANSI X9.62 示例曲线）被溯源到 FreeLIP/NTL 中的随机数配方；P-224/P-256/P-384/P-521 基点与 B-163 种子仍未解释。</p>
+    <p>文章称，使种子出处可复现，降低了「故意选弱曲线」的可信度；仍有少量可生成合格曲线的候选被跳过，原因不明，但作者认为不足以支撑「弱曲线很常见」的后门叙事。种子悬赏 36864 美元将捐给 Internet Security Research Group。页面公开了可复现种子与部分基点的代码（CC0）。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://www.anthropic.com/research/ecdsa-curve-origins">Anthropic：Claude reveals ECDSA curve origins（2026-10-16）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。技术结论与「非破解」定性以 Anthropic 原文为准；未解决的种子与基点亦按其披露列出。</p>
+</main>
+  </div>
+</body>
+</html>
