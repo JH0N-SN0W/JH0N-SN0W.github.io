@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>谷歌开源 TorchTPU、亚马逊推出 TorchNeuron：PyTorch 原生跑上自研 AI 芯片，两大云厂商同周挑战英伟达生态 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月21日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="chips">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/chips.html">芯片与算力</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/chips.html" data-category="chips">芯片与算力</a>
+  </div>
+<h1>谷歌开源 TorchTPU、亚马逊推出 TorchNeuron：PyTorch 原生跑上自研 AI 芯片，两大云厂商同周挑战英伟达生态</h1>
+  <p class="byline">2026-10-20 · Google Cloud Blog · PyTorch Blog · TechCrunch</p>
+  <figure class="figure">
+    <img src="../images/googleplex-outside-2017.jpg" alt="加州山景城谷歌总部 Googleplex 外景" width="1600" height="1067">
+    <figcaption>相关图片：加州山景城谷歌总部 Googleplex 外景（2017 年拍摄），不是 PyTorch 大会或 TPU 产品照。图片来源：David Nagle / <a href="https://commons.wikimedia.org/wiki/File:Outside_Googleplex_in_Mountain_View,_California.jpg">维基共享资源</a>，作者本人作品，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>谷歌 10 月 20 日在 PyTorch Conference 2026 上宣布，TorchTPU——其面向 Google TPU 的原生 PyTorch 栈——已在 GitHub 开源。谷歌称，TPU 由此与 GPU、CPU 一样成为 PyTorch 的原生选项；TorchTPU 与 Meta 的 PyTorch 团队共同开发，现有 PyTorch 工作负载只需极少改动即可在 TPU 上运行，支持 eager 模式调试，并可通过 torch.compile 提升性能。</p>
+    <p>前一天（10 月 19 日），亚马逊云科技发布 TorchNeuron：面向 AWS Trainium 的原生 PyTorch 后端，PyTorch 官方博客介绍称，开发者把设备指定为 neuron 即可在 Trainium 上运行现有代码。TechCrunch 报道称，亚马逊还在向 PyTorch 主项目提交代码，把多项功能与英伟达芯片解耦，让框架默认对任何硬件更开放。</p>
+    <blockquote class="pull">TechCrunch 报道称，亚马逊还在向 PyTorch 主项目提交代码，把多项功能与英伟达芯片解耦，让框架默认对任何硬件更开放。</blockquote>
+    <p>TechCrunch 指出，PyTorch 最初由 Meta（当时的 Facebook）于 2016 年开发，彼时英伟达 GPU 已是 AI 研究的标准硬件，因此许多功能是专为其构建的；据一些说法，约 85% 的 AI 应用使用 PyTorch。谷歌称已与 Hugging Face、Inferact（vLLM）、RadixArk（SGLang）等合作：在 Transformers v5 中，把模型部署到 TPU 只需传入 device_map="tpu"；TorchTitan 训练路径在最多 8192 块 Ironwood TPU 上验证，在 Qwen 3 8B 上取得最高 52% 的模型算力利用率。</p>
+    <p>谷歌还推出处于预览阶段的 TPU agent suite，帮助开发者把应用迁移到 TPU 并排查错误，并让端侧推理工具 LiteRT 加入 PyTorch 生态。TechCrunch 的判断是：这并不意味着开发者会立即大规模放弃英伟达硬件，但亚马逊和谷歌显然在努力削弱英伟达的优势。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus">Google Cloud Blog：TorchTPU is now open source: Run native PyTorch on TPUs（2026-10-20）</a></li>
+      <li><a href="https://pytorch.org/blog/introducing-torchneuron-native-pytorch-backend-for-aws-trainium/">PyTorch Blog：Introducing TorchNeuron: Native PyTorch backend for AWS Trainium（2026-10-19）</a></li>
+      <li><a href="https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/">TechCrunch：Google has joined Amazon in attacking Nvidia’s stronghold with AI app developers（2026-10-20）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。性能数字为谷歌自述；85% 的 PyTorch 使用比例为 TechCrunch 引述的说法。</p>
+</main>
+  </div>
+</body>
+</html>
