@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>微软：中国国家背景组织 Storm-0940 用智能体渗透框架 ARTEX 发动大规模攻击，并牵涉 ConnectWise 供应链入侵 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月24日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="safety">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/safety.html">安全与治理</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/safety.html" data-category="safety">安全与治理</a>
+  </div>
+<h1>微软：中国国家背景组织 Storm-0940 用智能体渗透框架 ARTEX 发动大规模攻击，并牵涉 ConnectWise 供应链入侵</h1>
+  <p class="byline">2026-10-21 · Microsoft Threat Intelligence · CyberScoop · The Record</p>
+  <figure class="figure">
+    <img src="../images/microsoft-building-92.jpg" alt="微软雷德蒙德总部 92 号楼" width="1600" height="1067">
+    <figcaption>相关图片：微软位于华盛顿州雷德蒙德的总部 92 号楼（2016 年拍摄），不是本次威胁情报发布现场。图片来源：Coolcaesar / <a href="https://commons.wikimedia.org/wiki/File:Building92microsoft.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>微软威胁情报 10 月 21 日发文称：早在 2026 年 9 月，被其跟踪为中国国家背景的威胁组织 Storm-0940，就开始用开源多智能体渗透测试框架 ARTEX 自动化攻击全球数百家组织，覆盖航空航天、能源、金融、政府、半导体等行业。多起攻击中，从初始瞄准到获取云特权访问不到 3 小时。微软评估 Storm-0940 应对近日披露的 ConnectWise 多租户应用供应链入侵负责。</p>
+    <blockquote class="pull">多起攻击中，从初始瞄准到获取云特权访问不到 3 小时。</blockquote>
+    <p>ARTEX 是用 Go 编写、带 Next.js 前端的多智能体 LLM 系统，可挂接任意模型，从侦察到数据窃取几乎少需人工。微软称该活动并非微软公司产品或服务被攻破。在 ConnectWise Cloud Backup 等应用凭据被滥用后，威胁方用已获授权的应用身份登录下游 Microsoft 365 租户，无需交互式用户登录；并在多环境经 Microsoft Graph 做侦察、改应用凭据、尝试提权。微软观察到对逾 2,250 个租户的登录尝试。</p>
+    <p>此前 10 月 10–14 日，同一基础设施对 8 家组织的 327 个账户发起跨租户密码喷洒，捕获逾 15.1 万次失败登录，峰值约 2,900 次/分钟；该波次未见成功认证。微软提醒：存在受影响应用或成功认证，并不必然等于客户数据被访问或外泄；建议禁用相关 ConnectWise 连接、审查服务主体登录与凭据/角色变更，并遵循 ConnectWise 遏制指南。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/">Microsoft Security Blog：AI-driven… ARTEX… ConnectWise（2026-10-21）</a></li>
+      <li><a href="https://cyberscoop.com/microsoft-attributes-connectwise-supply-chain-attack-china-storm-0940/">CyberScoop：Microsoft pins ConnectWise… Storm-0940（2026-10-21）</a></li>
+      <li><a href="https://therecord.media/china-cyber-connectwise-ai">The Record：Microsoft blames ConnectWise attacks… ARTEX（跟进）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。归因、时间线与规模数字均出自微软威胁情报公开报告；「中国国家背景」为微软评估用语。ConnectWise 侧细节以厂商公告为准。</p>
+</main>
+  </div>
+</body>
+</html>

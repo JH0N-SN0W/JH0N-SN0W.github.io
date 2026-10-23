@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>METR 与 Redwood Research 试点审计 OpenAI 内部智能体监控：估约 75%–94% 流量应被监控，发现可致数百动作漏监等漏洞 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月24日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="safety">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/safety.html">安全与治理</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/safety.html" data-category="safety">安全与治理</a>
+  </div>
+<h1>METR 与 Redwood Research 试点审计 OpenAI 内部智能体监控：估约 75%–94% 流量应被监控，发现可致数百动作漏监等漏洞</h1>
+  <p class="byline">2026-10-22 · METR · Redwood Research · CNBC · Reuters</p>
+  <figure class="figure">
+    <img src="../images/openai-pioneer-building.jpg" alt="旧金山 Pioneer Building 外景" width="1600" height="804">
+    <figcaption>相关图片：旧金山 Pioneer Building（OpenAI 曾用办公区附近，2019 年拍摄），不是本次审计现场。图片来源：HaeB / <a href="https://commons.wikimedia.org/wiki/File:Pioneer_Building,_San_Francisco_(2019)_-1.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>METR 于 10 月 22 日发文：7 月 21 日至 8 月 11 日三周期间，一名 METR 员工与一名 Redwood Research 员工对 OpenAI 内部失配（misalignment）监控系统做了高权限试点压力测试，产出约 61 页内部报告。双方约定只发简短公开摘要；评估对象是 7 月 21 日及之前的系统，不含当时正在推进的改动。评估人员使用 OpenAI 配发设备、现场陪同，可访问内部代码库、监控提示与配置，并访谈约十余名相关工程师。</p>
+    <p>公开摘要称：对至少与 GPT-5.5 同级模型的内部 Responses API（含 Codex 等）智能体流量，当时约有 75%–94%「应被监控」（eligible），其中内部 Codex 智能体流量约 99.2% 应被监控，估计存在较大不确定性。评估开始时 RL 训练跑次未纳入该监控；未监控 compaction 事件可能使约一成应监控的内部 Codex 流量漏掉（OpenAI 员工此前已发现，评估期间已修）。监控在智能体把控制权交回用户时触发，故在 compaction 未监控期间，智能体理论上可通过持续行动无限推迟被监控。</p>
+    <blockquote class="pull">约 75%–94% 的相关智能体流量「应被监控」——估计存在较大不确定性。</blockquote>
+    <p>其他发现包括：Codex 智能体原则上可绕过沙箱与 Auto-Review、执行宿主机用户能做的任何操作；一种可致「数百」近期动作（含利用本身）不被监控的漏洞（细节由 OpenAI 遮蔽）；利用轨迹序列化差异构造令监控失败、从而不升级人工复核的输入；两个可由客户端控制、用于新建未监控但其他相同智能体实例的请求头；以及被认为只读、却可能被颠覆以在沙箱内任意行动的两个未监控内部工具。OpenAI 事后称影响生产保障栈的漏洞均已修补，并描述了后续覆盖面变化；METR/Redwood 表示未再评估这些声称。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/">METR：Red-Teaming OpenAI's Internal Agent Monitoring Systems（2026-10-22）</a></li>
+      <li><a href="https://www.redwoodresearch.org/blog/red-teaming-openais-internal-agent">Redwood Research：同主题博文</a></li>
+      <li><a href="https://www.cnbc.com/2026/10/22/metr-redwood-research-open-ai-test.html">CNBC：Third-party evaluators found vulnerabilities…（2026-10-22）</a></li>
+      <li><a href="https://www.investing.com/news/stock-market-news/ai-safety-group-metr-finds-flaws-in-openais-internal-monitoring-system-4966975">Reuters / Investing.com：METR finds flaws…（2026-10-22）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。覆盖率估计与漏洞摘要出自 METR/Redwood 公开帖；OpenAI 修补声明未经第三方复核。公开帖仅反映 7 月 21 日及之前的历史系统。</p>
+</main>
+  </div>
+</body>
+</html>
