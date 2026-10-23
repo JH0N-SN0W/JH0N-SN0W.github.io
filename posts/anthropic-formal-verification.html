@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthropic：Claude 在约 123 个开源库、239 个模糊测试入口写出机器可检 Rocq 证明；证明过程中还发现多年漏网的缺陷 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月24日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>Anthropic：Claude 在约 123 个开源库、239 个模糊测试入口写出机器可检 Rocq 证明；证明过程中还发现多年漏网的缺陷</h1>
+  <p class="byline">2026-10-22 · Anthropic · Theorem</p>
+  <figure class="figure">
+    <img src="../images/pure-mathematics-formulae-blackboard.jpg" alt="黑板上的数学公式" width="1600" height="1067">
+    <figcaption>相关图片：黑板上的数学公式示意（资料图），与 Anthropic/Theorem 形式化验证项目无直接关系。图片来源：Wallpoper / <a href="https://commons.wikimedia.org/wiki/File:Pure-mathematics-formul%C3%A6-blackboard.jpg">维基共享资源</a>；据 Commons 页面称该作品已进入公有领域（PD）。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>Anthropic 前沿红队 10 月 22 日发文：与 Theorem 合作，展示大模型可大规模写出形式化证明。Claude 在 RISC-V 汇编层面对逾 100 个真实开源库证明安全性质；对 Google OSS-Fuzz 中 123 个库的 239 个入口点，证明在特定假设下（单线程静态二进制、固定内存预算、RISC-V + Linux）对小于 64 MB 的任意输入不会因内存安全错误或断言失败而崩溃。证明约 1.8 亿行 Rocq，典型单证约 60 万行，覆盖中位约 1.8 万条 RISC-V 指令的二进制。</p>
+    <blockquote class="pull">239 个模糊测试入口、123 个库——在既定假设下证明「不崩溃」。</blockquote>
+    <p>方法是把既有模糊测试入口自动转成「该测试永不崩溃」规格，再结合 Theorem 的 RISC-V/OS 语义由 Rocq 内核检查。写证明过程中 Claude 还发现并修补了多年漏网、模糊测试难触达的缺陷（例如约 20 MB 特殊布局才触发的下溢写越界、需 64 MB 输入与逾 2 GB 内存的读越界、以及 libexpat 的 CVE-2026-56132 等）。公司强调「形式化验证」不等于无 bug：规格、机器语义与 Rocq 本身仍属可信基；当前证明不覆盖 x86/ARM、glibc 动态链接、多线程等部署常见形态。</p>
+    <p>Anthropic 公布部分可独立核验的证明与语义，Theorem 愿为其他开源项目跑同一流水线并发布 Claude skill。文中还简述用 Claude 验证 Linux 内核 zlib 对 RFC 1950 的实现、用 Verus 证明 Rust 版 Python 子集解释器等案例。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://www.anthropic.com/research/formal-verification">Anthropic：LLMs are making formal software verification feasible…（2026-10-22）</a></li>
+      <li><a href="https://www-cdn.anthropic.com/files/4zrzovbb/website/6867eadf760258fa8b42a504600cd3c036d16358.pdf">Anthropic：Formal verification appendix（PDF）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。库数量、入口点数与证明规模均出自 Anthropic 研究帖；「形式化验证」范围与假设以原文 Limitations 一节为准。</p>
+</main>
+  </div>
+</body>
+</html>

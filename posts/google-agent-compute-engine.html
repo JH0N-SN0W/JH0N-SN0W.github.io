@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>谷歌云推出 Agent Compute Engine：硬件隔离 microVM 托管智能体，源自 Gemini 内部基建；客户预览将至 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月24日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="chips">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/chips.html">芯片与算力</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/chips.html" data-category="chips">芯片与算力</a>
+  </div>
+<h1>谷歌云推出 Agent Compute Engine：硬件隔离 microVM 托管智能体，源自 Gemini 内部基建；客户预览将至</h1>
+  <p class="byline">2026-10-22 · Google Cloud · The New Stack · SiliconANGLE</p>
+  <figure class="figure">
+    <img src="../images/google-gradient-canopy-2025.jpg" alt="加州山景城谷歌 Gradient Canopy 园区" width="1600" height="1067">
+    <figcaption>相关图片：谷歌位于加州山景城的 Gradient Canopy 办公楼（2025 年拍摄），与 Agent Compute Engine 发布无直接关系。图片来源：GualdimG / <a href="https://commons.wikimedia.org/wiki/File:Google´s_Gradient_Canopy,_Mountain_View,_California_19.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>据 The New Stack、SiliconANGLE 等报道，谷歌云于 10 月 22 日在 Linux Foundation 的 AGNTCon+MCPCon（圣何塞）宣布 Agent Compute Engine：把支撑 Gemini 等智能体的内部算力基建产品化，为每个智能体会话提供硬件隔离的单租户 microVM（自有客户内核与 root），兼顾容器式启动速度与沙箱隔离；客户预览预计今年晚些时候开放。官方博文亦介绍该服务与扩展的智能体治理能力。</p>
+    <blockquote class="pull">每个智能体会话一台硬件隔离的 microVM——源自 Gemini 内部基建。</blockquote>
+    <p>技术说明称：传统 VM 启停慢，普通容器又难满足需要内核级控制的编码/助手类智能体。Agent Compute Engine 用 Cloud Hypervisor，并由 Titan/Titanium IPU 等硬件信任根支撑；沙箱内不存放长期密钥，身份为短时会话级，出站经外部代理，凭证在沙箱外由 Agent Gateway 注入。智能体空闲时对 microVM 做检查点，几乎不占活动资源，待下一轮工具调用再恢复——针对「大半时间在等模型或用户」的特点。</p>
+    <p>谷歌同时强调面向 GKE 的开源 Agent Substrate：在 Agent Sandbox 上加轻量控制面，可对空闲智能体快照并回收算力，称密度可达传统方案约 10 倍；在 20 万智能体基准中处理约 500 次激活/秒，挂起/恢复低于约 0.5 秒。Substrate 可与 Claude Code 等 harness 配合。定价、区域与正式 GA 日期尚未在报道中给出。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://cloud.google.com/blog/topics/ai-infrastructure/introducing-agent-compute-engine-and-expanded-agent-governance">Google Cloud Blog：Introducing Agent Compute Engine…（2026-10-22）</a></li>
+      <li><a href="https://cloud.google.com/blog/topics/ai-infrastructure/agent-compute-engine-deep-dive">Google Cloud Blog：Agent Compute Engine deep dive</a></li>
+      <li><a href="https://thenewstack.io/google-agent-compute-engine/">The New Stack：Google turns… Agent Compute Engine（2026-10-22）</a></li>
+      <li><a href="https://siliconangle.com/2026/10/22/google-cloud-introduces-agent-compute-engine-to-host-ai-agents/">SiliconANGLE：Google Cloud introduces Agent Compute Engine（2026-10-22）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。产品能力与基准数字转述自谷歌云博文及科技媒体报道；预览时间与定价以谷歌云最终公告为准。</p>
+</main>
+  </div>
+</body>
+</html>
