@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AWS 开源 Infinity：面向极端并发的智能体运行时，称 8GB 可驻留约 7.5 万个空闲智能体 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月25日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>AWS 开源 Infinity：面向极端并发的智能体运行时，称 8GB 可驻留约 7.5 万个空闲智能体</h1>
+  <p class="byline">2026-10-23 · AWS Open Source Blog · GitHub（hydro-project/infinity）</p>
+  <figure class="figure">
+    <img src="../images/amazon-datacenter.jpg" alt="俄勒冈州 Boardman 的亚马逊数据中心" width="1600" height="1067">
+    <figcaption>资料图：俄勒冈州 Boardman 的亚马逊数据中心（2013 年拍摄），不是 Infinity 发布或 Hydro 实验室现场。图片来源：Visitor7 / <a href="https://commons.wikimedia.org/wiki/File:Amazon_Datacenter.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">CC BY-SA 3.0</a> 授权，可署名转载。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>AWS 开源博客于 2026 年 10 月 23 日由 Shadaj Laddad 撰文，宣布以 Apache 2.0 许可发布研究项目 Infinity，作为 AWS 与加州大学伯克利分校合作的 Hydro 项目一部分。Infinity 把智能体工具调用当作无栈协程的挂起点：调用工具时派发调用、持久化对话并挂起智能体；工具结果到达后再从存储恢复。目标是让智能体在等待构建、审批或外部事件时不再长期占用进程与内存。</p>
+    <blockquote class="pull">「With Infinity, concurrent agents are extremely lightweight. For example, we can fit 75,000 concurrent agents in the 8 GB of a Raspberry Pi 5.」</blockquote>
+    <p>官方基准称，在模拟模型下约每空闲智能体占用 100 KB 常驻内存，按此速率约 7.5 万个智能体可放入 8 GB（树莓派 5 内存量级）。挂起后无运行中的任务，因此也可部署在无服务器平台：参考架构使用 SQS FIFO、Lambda、Aurora DSQL 与 DynamoDB，工具调用等待期间无需保持函数运行。异步事件通过「合成工具调用」（synthetic tool calls）注入对话，使模型 API 仍看到合规的工具调用/结果结构；父子智能体通信亦复用同一机制。</p>
+    <p>代码仓库为 github.com/hydro-project/infinity。AWS 强调这是早期研究发布，欢迎反馈；文中亦列出事件交错推理、调度策略、对话树压缩与事件真实性等未决问题。内存与并发数字为 AWS 自测基准，第三方复现情况本稿未核对。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://aws.amazon.com/blogs/opensource/introducing-infinity-a-runtime-for-extreme-agent-concurrency/">AWS Open Source Blog：Introducing Infinity…（2026-10-23）</a></li>
+      <li><a href="https://github.com/hydro-project/infinity">GitHub：hydro-project/infinity</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。并发与内存数字、无服务器参考架构均为 AWS 研究博客自述；项目仍处早期。</p>
+</main>
+  </div>
+</body>
+</html>
