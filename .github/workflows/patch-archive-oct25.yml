@@ -1,0 +1,44 @@
+name: Patch archive Oct25
+on:
+  workflow_dispatch:
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch archive/2026-10.html
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          p = Path('archive/2026-10.html')
+          t = p.read_text(encoding='utf-8')
+          t = t.replace('2026年10月24日', '2026年10月25日', 1)
+          new_lis = '''    <li class="no-thumb" data-category="models"><div><a class="cat-pill" href="../categories/models.html" data-category="models">模型与产品</a><h3><a href="../posts/kimi-k3-1-pro.html">月之暗面发布 Kimi K3.1 Pro：3T 级开源权重模型，百万 token 上下文；完整权重拟 11 月 4 日前开放</a></h3><p class="byline">2026-10-23 · Kimi / Moonshot · Bloomberg</p></div></li>
+    <li class="no-thumb" data-category="industry"><div><a class="cat-pill" href="../categories/industry.html" data-category="industry">产业与融资</a><h3><a href="../posts/daytona-60m-series-b.html">Daytona 完成 6000 万美元 B 轮、估值约 10 亿美元：FirstMark 领投，为长程智能体建「智能体云」</a></h3><p class="byline">2026-10-23 · TechCrunch · Fortune</p></div></li>
+    <li class="no-thumb" data-category="industry"><div><a class="cat-pill" href="../categories/industry.html" data-category="industry">产业与融资</a><h3><a href="../posts/anthropic-hg-europe-consultancy.html">FT：Anthropic 拟与私募 Hg 共同支持欧洲独立 AI 咨询公司，年底前落地伦敦与柏林</a></h3><p class="byline">2026-10-23 · Financial Times · The Next Web</p></div></li>
+    <li class="no-thumb" data-category="research"><div><a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a><h3><a href="../posts/aws-infinity-agent-runtime.html">AWS 开源 Infinity：面向极端并发的智能体运行时，称 8GB 可驻留约 7.5 万个空闲智能体</a></h3><p class="byline">2026-10-23 · AWS Open Source Blog · GitHub（hydro-project/infinity）</p></div></li>
+    <li class="no-thumb" data-category="research"><div><a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a><h3><a href="../posts/anthropic-agent-skills-aaif.html">Anthropic 将 Agent Skills 开放标准捐给 Linux 基金会旗下 Agentic AI Foundation</a></h3><p class="byline">2026-10-22 · Anthropic · Linux Foundation / AAIF</p></div></li>
+'''
+          marker = '  <ul class="index-list">\n'
+          if 'kimi-k3-1-pro.html' in t:
+              print('already patched')
+          elif marker not in t:
+              raise SystemExit('marker missing')
+          else:
+              t = t.replace(marker, marker + new_lis, 1)
+          p.write_text(t, encoding='utf-8')
+          print('ok', p.stat().st_size)
+          PY
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive/2026-10.html
+          if git diff --cached --quiet; then
+            echo 'no changes'
+          else
+            git commit -m "archive/2026-10: prepend Oct 22–23 posts + dateline 2026年10月25日"
+            git push
+          fi
