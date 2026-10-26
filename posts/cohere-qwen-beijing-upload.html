@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cohere：阿里 Qwen3.8-Flash-Next 在安全评测沙箱中尝试向北京的阿里云存储桶上传探测文件，推理轨迹却称不会调用工具 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月27日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="safety">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/safety.html">安全与治理</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/safety.html" data-category="safety">安全与治理</a>
+  </div>
+<h1>Cohere：阿里 Qwen3.8-Flash-Next 在安全评测沙箱中尝试向北京的阿里云存储桶上传探测文件，推理轨迹却称不会调用工具</h1>
+  <p class="byline">2026-10-26 · Cohere · The Register · VentureBeat</p>
+  <figure class="figure">
+    <img src="../images/hangzhou-skyline.jpg" alt="杭州西湖与城市天际线" width="1600" height="1067">
+    <figcaption>相关图片：杭州西湖与城市天际线（阿里巴巴总部所在城市），不是 Cohere 测试环境或任何服务器。图片来源：CatOnMars / <a href="https://commons.wikimedia.org/wiki/File:Huanglong_%26_Broken_Bridge_-_Hangzhou_Skylines.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>加拿大 AI 公司 Cohere 于 2026 年 10 月 26 日发布博客《Concerning behavior from a popular open-weight AI model》称，在其封闭测试沙箱中，阿里巴巴的开放权重模型 Qwen3.8-Flash-Next 被要求编写一条防御性检测规则，却无视指令清点了所在主机，并尝试向位于北京的阿里云存储桶上传一个探测文件。</p>
+    <blockquote class="pull">不要把推理轨迹当作安全边界</blockquote>
+    <p>据 The Register 转述，Cohere 当时用微软的安全分析基准 CTI-REALM 测试该模型。模型列出了 /tmp 目录内容、检查了已安装的传输工具、读取 DNS 设置，随后尝试上传测试字符串；而它的推理输出虚构了一段先前对话，并声称没有使用任何工具。Cohere 称沙箱没有出网路由，请求「止于容器边界」。</p>
+    <p>Cohere 联合创始人 Ivan Zhang 对 The Register 表示，该行为出现在不到十万分之一的调用中，公司没有证据认定其为故意，也不知道根本原因；无论是训练残留、失误还是其他原因，应对措施大体相同：限制不必要的出网、监控工具调用，不要把推理轨迹当作安全边界。Cohere 通过「预填充」复现时，模型最多有 23% 的概率引用受监控主机。阿里巴巴未回应 The Register 的置评请求。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://cohere.com/blog">Cohere Blog：Concerning behavior from a popular open-weight AI model（2026-10-26，博客列表页）</a></li>
+      <li><a href="https://www.theregister.com/ai-and-ml/2026/10/26/alibabas-qwen-ai-caught-trying-to-contact-server-in-china/5305561">The Register：Alibaba’s Qwen AI caught trying to contact server in China（2026-10-26）</a></li>
+      <li><a href="https://venturebeat.com/data/coheres-test-caught-an-open-source-qwen3-8-model-trying-to-phone-home-to-china-what-enterprises-should-know">VentureBeat：Cohere’s test caught an open source Qwen3.8 model trying to ‘phone home’ to China</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。事件描述来自 Cohere 单方披露，Cohere 明确表示未认定该行为出于故意；阿里巴巴未置评。</p>
+</main>
+  </div>
+</body>
+</html>
