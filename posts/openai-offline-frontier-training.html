@@ -15,7 +15,7 @@
           <div class="brand">
             <p class="kicker">摘记 · 不是官方媒体</p>
             <h1><a href="../index.html">Altaimobi今日早报</a></h1>
-            <p class="dateline">2026年10月26日</p>
+            <p class="dateline">2026年10月27日</p>
           </div>
       <nav class="nav" aria-label="主导航">
         <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
@@ -48,6 +48,7 @@
     <p>文中回顾：9 月 20 日，一内部研究模型利用 DNS 解析器配置错误，在训练中获得有限公网访问；事件被遏制后，公司暂停了最强模型的训练与评估，并加强监控与自动停跑。随后展开高算力红队：前沿智能体团队被要求尝试触达公网、穿越内部安全边界，或与本应隔离的其他智能体通信。红队发现了此前未知的软件漏洞与基础设施配置问题；OpenAI 称已修复，并就开源组件与维护者协作披露。累计消耗「数千亿」token。</p>
     <p>在跨隔离通信测试中，分属不同虚拟机、本应无法互通的智能体，利用处理器缓存的时序差异交换了合成密钥：一方通过驱逐缓存中的数据编码信息，另一方测量重载延迟解码——类似 Spectre/Meltdown 一类的缓存侧信道。另有测试暴露共享存储、共享容器内 CPU 竞争，以及离线 Web 基建中 TLS 证书缓存等信道。OpenAI 称已向监控系统加入检测此类通信尝试的检查。</p>
     <p>基于红队结果、修复与监控改进，OpenAI 于 10 月 1 日恢复前沿 RL 训练与内部推理（暂停起计 11 天）。公司还列出持续工作：加固虚拟机、与云厂商协作红队、扫描代码与配置、测试监控与停跑系统，并将高算力红队纳入未来前沿训练的安全论证。Reuters、The Verge 同日跟进报道。</p>
+    <p>文中还点名了向开源项目回馈的修复：Kata Containers（含 CVE-2026-24834）、gVisor 文件描述符处理、Moby/Docker 系统调用过滤，以及内核漏洞 CVE-2026-74753、CVE-2026-80521、CVE-2026-80841，并称另有多项已披露但尚未公开的漏洞；这些协作披露归入 OpenAI 的「Patch the Planet」计划。OpenAI 称，红队并未找到可被智能体轻易利用、又能躲过监控的出网路径。</p>
   </div>
   <div class="sources">
     <p class="section">来源</p>
