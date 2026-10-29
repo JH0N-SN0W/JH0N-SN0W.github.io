@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>英伟达开源 Nemotron 3.5 Transcribe：约 4.3B 激活参数的语音 LLM，40 语种；英语 Open ASR 均 WER 4.71%，多语 4.62% — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月30日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="models">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/models.html">模型与产品</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/models.html" data-category="models">模型与产品</a>
+  </div>
+<h1>英伟达开源 Nemotron 3.5 Transcribe：约 4.3B 激活参数的语音 LLM，40 语种；英语 Open ASR 均 WER 4.71%，多语 4.62%</h1>
+  <p class="byline">2026-10-28 · NVIDIA Research / Nemotron</p>
+  <figure class="figure">
+    <img src="../images/nvidia-hq-santa-clara.jpg" alt="加州圣克拉拉的英伟达总部大楼" width="1600" height="900">
+    <figcaption>相关图片：加州圣克拉拉的英伟达总部大楼（2018 年拍摄），不是本次模型发布会现场。图片来源：Coolcaesar / <a href="https://commons.wikimedia.org/wiki/File:NVIDIA_Headquarters.jpg">维基共享资源</a>，作者本人作品，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>英伟达 Nemotron 实验室于 2026 年 10 月 28 日发布 Nemotron 3.5 Transcribe，定位为面向「智能转写」的语音增强语言模型（SALM）：将 Transformer 语音编码器、冻结的 Nemotron 3 Diarization 模型与 Nemotron 3.5 Lightning 混合 Mamba–Transformer MoE LLM 耦合，约 4.3B 激活参数。单模型可按自然语言指令切换逐字/书面体/语境/说话人归属/富文本转写、语音翻译与语种识别，支持 40 种语言、最长约一小时录音，并可按需返回带说话人归属的词级时间戳。权重以 OpenMDW-1.1 开源，并提供 NeMo Speech 微调工具包；公开检查点命名为 30B-A4B（含 BF16、FP8、NVFP4、GGUF 与 DFlash2 草稿模型等）。</p>
+    <blockquote class="pull">英语 Open ASR 九个公开测试集均 WER 4.71%，多语 Open ASR Leaderboard 均 WER 4.62%，称其为开源权重最佳</blockquote>
+    <p>亮点包括：在英语 Open ASR Leaderboard 九个公开测试集上均 WER 4.71%、多语 Open ASR Leaderboard 均 WER 4.62%，称其为开源权重最佳；重叠多人说话人归属 ASR 达先进水平，并称据其所知是首个在该任务上超过专用级联系统的 SALM；给定实体列表时，ContextASR-Bench 上命名实体错误约降为六分之一；解码后用轻量 CTC 适配器对齐音频以产生词时间戳。推理侧支持原生多 token 预测（MTP）推测解码与可选 DFlash2；Nemotron Transcribe NIM 上，NVFP4 检查点配 DFlash2 在单块 RTX PRO 6000 Blackwell 上可达每秒转写约 2238 秒音频。</p>
+    <p>技术贡献包括：并行专家编码器将冻结说话人日志活动注入 ASR 表征；按答词质量采样的监督平衡训练混合；与 MTP 目标联合训练；并给出评测所用提示建议，以及在单卡上约 0.5–2.3 GPU 小时适配新语言/领域/任务的结果（文中称覆盖 17 项任务）。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/">NVIDIA Research：NVIDIA Nemotron 3.5 Transcribe（2026-10-28）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。WER、语种数、激活参数与许可均出自英伟达 Nemotron 实验室页面；排行榜名次以该页自述为准。</p>
+</main>
+  </div>
+</body>
+</html>
