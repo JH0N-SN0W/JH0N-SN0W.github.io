@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mistral 正式开源 Mistral Large 4「Le Chonk」权重：约 1T 参数 MoE、约 49–52B 激活、100 万上下文；FrontierCode 2.0 开源权重领先 19.7%，Terminal-Bench 4.0 达 41% — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年10月31日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>Mistral 正式开源 Mistral Large 4「Le Chonk」权重：约 1T 参数 MoE、约 49–52B 激活、100 万上下文；FrontierCode 2.0 开源权重领先 19.7%，Terminal-Bench 4.0 达 41%</h1>
+  <p class="byline">2026-10-29 · Mistral · Hugging Face</p>
+  <figure class="figure">
+    <img src="../images/starmer-mensch-2025.jpg" alt="Mistral AI CEO Arthur Mensch 在唐宁街 10 号与英国首相斯塔默交谈" width="1600" height="1068">
+    <figcaption>资料图：Mistral AI 联合创始人兼 CEO Arthur Mensch（右）2025 年 1 月在伦敦唐宁街 10 号与英国首相斯塔默会面，不是本次开源发布现场。图片来源：Simon Dawson / No 10 Downing Street / <a href="https://commons.wikimedia.org/wiki/File:Prime_Minister_Keir_Starmer_meets_Arthur_Mensch_(54256710173).jpg">维基共享资源</a>，以 <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">英国开放政府许可 OGL v3.0</a> 发布，允许注明出处后转载。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>Mistral 于 2026 年 10 月 29 日宣布正式开放 Mistral Large 4（昵称「Le Chonk」）改进版权重。官网称，这是在本月早些时候公开预览之后、继续强化强化学习与社区反馈后的版本，重点提升编程、防御性网络安全与推理效率；Hugging Face 博客同日介绍该模型为约 1 万亿总参数、约 490 亿激活参数的多模态 MoE，上下文窗口 100 万 token；模型卡仓库名为 Mistral-Large-4-1T-A52B（标注含嵌入等合计约 520 亿激活量级）。</p>
+    <blockquote class="pull">Mistral Large 4 在 FrontierCode 2.0 以 19.7% 领先开源权重，Terminal-Bench 4.0 达 41%，恶意网络请求平均拒答率 96.6%</blockquote>
+    <p>编程方面，Mistral 称在 Cognition 的 FrontierCode 2.0（评估端到端代码质量与维护者是否会合并变更）上以 19.7% 领先开源权重模型；Artificial Analysis Coding Agent Index 得分 48%，与领先开源权重模型 GLM-5.3 基本持平，但平均每任务少用约 47% token；Terminal-Bench 4.0 相对预览提升 13 个百分点至 41%，并减少约 30% 输出 token。模型现提供 low / medium / high（默认）三档推理模式，以平衡成本与性能。</p>
+    <p>安全与企业能力上，官网给出 Artificial Analysis Cyber Index 51%；恶意网络请求平均拒答率 96.6%，称在其评测的开源模型中最高；Finch（FinWorkBench）73.3%；BrowseComp 84.5%；B3 智能体安全基准攻击抵抗 97.1%（预览为 93.3%）。架构上，Hugging Face 称 128 个路由专家中每次激活 4 个，另加 1 个共享专家；官网称原生支持 160 多种语言，并在欧洲基础设施上用约 3800 块 Grace Blackwell GPU 从头训练。</p>
+    <p>许可为 Mistral Ecosystem Open-Weight（类 MIT，但对以模型即服务方式商用需另行取得商业许可）。API 定价为每百万 token 输入 0.70 美元、缓存输入 0.07 美元、输出 2.10 美元。权重可在 Hugging Face 下载，并以 vLLM、SGLang、Hugging Face Transformers、NVIDIA NIM 等部署。本站较早的预览稿仍保留在存档；本稿只记开源权重发布。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://mistral.ai/news/mistral-large-4-oss/">Mistral：Mistral Large 4 (Le Chonk) is now open weight（2026-10-29）</a></li>
+      <li><a href="https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B">Hugging Face：mistralai/Mistral-Large-4-1T-A52B</a></li>
+      <li><a href="https://huggingface.co/blog/mistral-large4">Hugging Face Blog：Mistral Large 4（2026-10-29）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。基准、价格、许可与参数出自 Mistral 官网与 Hugging Face；外部基准结果以原发布方声明为准。</p>
+</main>
+  </div>
+</body>
+</html>
