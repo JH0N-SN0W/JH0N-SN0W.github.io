@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>英伟达推 TensorRT Edge-LLM：在 DGX Spark 64GB 上几条命令即可原型边缘模型；DSpark 推测解码 HumanEval 均速约 126.9 token/s — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月1日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="chips">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/chips.html">芯片与算力</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/chips.html" data-category="chips">芯片与算力</a>
+  </div>
+<h1>英伟达推 TensorRT Edge-LLM：在 DGX Spark 64GB 上几条命令即可原型边缘模型；DSpark 推测解码 HumanEval 均速约 126.9 token/s</h1>
+  <p class="byline">2026-10-30 · NVIDIA Technical Blog</p>
+  <figure class="figure">
+    <img src="../images/nvidia-hq-santa-clara.jpg" alt="加州圣克拉拉英伟达总部外观" width="1600" height="979">
+    <figcaption>相关图片：加州圣克拉拉英伟达总部外观，不是 DGX Spark 或边缘设备实测现场。图片来源：Coolcaesar / <a href="https://commons.wikimedia.org/wiki/File:NVIDIA_Headquarters.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">CC BY-SA 3.0</a> 授权，可署名转载。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>英伟达技术博客于 2026 年 10 月 30 日介绍 TensorRT Edge-LLM：面向嵌入式负载的轻量 C++ 推理运行时，使开发者可在 DGX Spark 64GB 上原型、微调与测试模型与智能体，并部署到 Jetson Thor、DRIVE AGX Thor 与 IGX Thor 等平台。文章由 Joe Halabi、Lin Chai、Maximilien Breughe、Michael Ferry 与 Charlotte Mallo 署名。</p>
+    <blockquote class="pull">DSpark 开启后 HumanEval 提示平均生成速度约 126.9 token/s；峰值系统内存约 27.9GB</blockquote>
+    <p>通过 trtedge CLI，用户可下载所选模型并构建面向 Spark 的 TensorRT 引擎。示例在虚拟环境中安装 tensorrt-edgellm[server]==0.11.1，要求 CUDA 13、TensorRT 10.16.1.11 或更新的 10.x，以及 Python 3.10–3.12；文中测试组合为 TensorRT Edge-LLM 0.11.1 与 TensorRT 10.16.1.11。一条命令即可与 Nemotron-3.5 Lightning（文本模型）对话；亦可 trtedge serve 提供本地 OpenAI 兼容 API。</p>
+    <p>可选开启 DSpark 推测解码（示例为 3 个草稿 token）。在 DGX Spark 64GB、NVFP4、thinking 开启、批大小 1 等条件下，HumanEval 提示上关闭 DSpark 时平均生成速度约 73.4 token/s，开启后约 126.9 token/s；中位 TTFT 约 98.1–98.7 ms。开启 DSpark 时峰值系统内存约 27.9GB（含操作系统）。公司称亦可尝试视觉—语言模型及语音相关模型，并指向 TensorRT Edge-LLM 文档与 Nemotron 开发者页面。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://developer.nvidia.com/blog/run-ai-models-for-edge-application-development-with-just-a-few-commands/">NVIDIA Technical Blog：Run AI Models for Edge Application Development with Just a Few Commands（2026-10-30）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。性能数字与软件版本均出自英伟达技术博客所述测试配置；不同机型与负载结果可能不同。</p>
+</main>
+  </div>
+</body>
+</html>
