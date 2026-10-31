@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Research 提出「睡眠」持续学习框架：离线巩固短时记忆至参数，长上下文评测可达约 1000 万 token — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月1日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>Google Research 提出「睡眠」持续学习框架：离线巩固短时记忆至参数，长上下文评测可达约 1000 万 token</h1>
+  <p class="byline">2026-10-27 · Google Research</p>
+  <figure class="figure">
+    <img src="../images/google-gradient-canopy-2025.jpg" alt="加州山景城谷歌 Gradient Canopy 办公楼外景" width="1600" height="895">
+    <figcaption>相关图片：加州山景城谷歌 Gradient Canopy 办公楼外景，不是睡眠框架实验现场。图片来源：<a href="https://commons.wikimedia.org/wiki/File:Google%C2%B4s_Gradient_Canopy,_Mountain_View,_California_19.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权。本站缩小至约 1600 像素宽，副本仍为同一许可。</figcaption>
+  </figure>
+  <div class="body">
+    <p>Google Research 于 2026 年 10 月 27 日发表博客，介绍由 Ali Behrouz 与 Vahab Mirrokni 等人提出的「睡眠」（sleep）持续学习框架：在固定模型架构与人工定义训练规则下，让大语言模型在主动交互与离线记忆巩固之间交替，以持续吸收新事实、减轻灾难性遗忘，并提升复杂推理。</p>
+    <blockquote class="pull">交替「清醒」交互与离线巩固；BABILong 上称可扩展至约 1000 万 token 的近完美表现</blockquote>
+    <p>主动（清醒）阶段：模型处理输入，把临时信息存在快速短时记忆组件中。睡眠阶段：暂停处理新输入，把计算转向记忆巩固与自我改进——解锁预分配的 MoE 记忆块，并用自生成练习样例更新权重。巩固阶段通过低秩专家扩展与广义知识蒸馏（含 on-policy 蒸馏与 Learning to Imitate）把高频率短时痕迹写入更稳定的低频参数，再重置临时参数；「做梦」阶段则随机激活非常规专家生成合成样例，经梯度筛选后用强化学习细化。</p>
+    <p>博客报告：在未见语言（如满语、Kalamang）的持续翻译多阶段评测中，睡眠框架表现接近零跌幅，而 ICL、Cartridges、SFT 等基线出现严重遗忘；在 BABILong 长上下文上，方法在约 1000 万 token 尺度接近完美扩展，并称优于 GPT-4、Titans 等基线；事实知识并入（SQuAD 与持续预训练）单任务 48.9%、CPT 46.2%；数学推理 AIME 24/25 与 HMMT 25 分别为 79.2%、69.0%、46.1%。作者强调术语借自神经科学，但机制完全在工程训练循环内运行。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/">Google Research：The sleep framework: A new way for LLMs to retain knowledge in continual learning（2026-10-27）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。基准数字与对比结论均出自 Google Research 博客；可复现细节以论文与官方材料为准。</p>
+</main>
+  </div>
+</body>
+</html>
