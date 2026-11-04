@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI：自主漏洞发现与补丁流水线一次跑出 948 个 Linux 本地提权利用；API 成本约 121 万美元 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月5日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>OpenAI：自主漏洞发现与补丁流水线一次跑出 948 个 Linux 本地提权利用；API 成本约 121 万美元</h1>
+  <p class="byline">2026-11-04 · OpenAI</p>
+  <figure class="figure">
+    <img src="../images/server-room-pd.jpg" alt="服务器机房中的机柜" width="1600" height="1067">
+    <figcaption>相关图片：服务器机房（瑞典皇家理工学院并行计算中心，2010 年拍摄），示意系统软件与基础设施，不是 OpenAI 本次受控研究环境。图片来源：Esquilo / <a href="https://commons.wikimedia.org/wiki/File:PDC_server_room.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">CC BY-SA 3.0</a> 授权，可署名转载。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>OpenAI 于 2026 年 11 月 4 日发文《A thousand fewer paths to root》，介绍一套面向 Linux 内核的自主漏洞发现、动态复现、可利用性评估与补丁生成流水线。文中称，在受控研究环境中，原型识别并分析了 2,308 条候选发现，动态复现 1,724 个漏洞，并生成 948 个可让低权限本地用户获得 root 的本地提权（LPE）利用。</p>
+    <blockquote class="pull">安全研究正从个案追查，转向可规模化跑通的系统流程</blockquote>
+    <p>公司称该次中期 2026 年 10 月的完整跑次使用即将发布的网络安全模型，API 费用合计约 1,213,430 美元，折合约每条 LPE 利用 1,279 美元。流水线输出含根因分析、最小崩溃 PoC、候选补丁与完整利用，供人类研究员评估严重性并向上游提交。OpenAI 表示已按 Linux 社区建议，优先报告关键漏洞，并与 Patch the Planet 合作方继续推进其余补丁。</p>
+    <p>文中还给出对照：在适配的 kernelCTF 环境中获得 25 个信息泄露 PoC 与 21 个 LPE；对抽样的 166 个利用，据公司与外部内核利用专家判断，至少包含 10 种新颖利用技术（出于安全未公开细节）。OpenAI 强调维护者在扫描期间已快速合入大量补丁，并认为自动化补丁生成对缩小利用窗口至关重要；人类专家仍需审核利用路径与补丁质量。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://openai.com/index/a-thousand-fewer-paths-to-root/">OpenAI：A thousand fewer paths to root（2026-11-04）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。数字、成本与技术描述均出自 OpenAI 官方博文；漏洞披露进度、上游接受情况与外部可复现性取决于后续社区验证。</p>
+</main>
+  </div>
+</body>
+</html>

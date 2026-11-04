@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthropic 开源 FlashProve：用 zkSNARK 证明回复来自所承诺模型权重；Llama 4 Maverick 约 110 token/秒出证 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月5日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>Anthropic 开源 FlashProve：用 zkSNARK 证明回复来自所承诺模型权重；Llama 4 Maverick 约 110 token/秒出证</h1>
+  <p class="byline">2026-11-02 · Anthropic</p>
+  <figure class="figure">
+    <img src="../images/pure-mathematics-formulae-blackboard.jpg" alt="黑板上的纯数学公式示意" width="1600" height="1067">
+    <figcaption>相关图片：黑板上的数学公式示意（资料图），象征密码学与形式化证明，与 FlashProve 运行环境无直接关系。图片来源：Wallpoper / <a href="https://commons.wikimedia.org/wiki/File:Pure-mathematics-formul%C3%A6-blackboard.jpg">维基共享资源</a>；据 Commons 页面称该作品已进入公有领域（PD）。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>Anthropic Frontier Red Team 于 2026 年 11 月 2 日发表《Progress on provable inference for large language models》，并开源原型系统 FlashProve。目标是：用户在不知道模型权重、算力有限的前提下，仍能验证回复确实由提供方所承诺的那组权重生成，而非被路由替换或篡改的 token 流。</p>
+    <blockquote class="pull">当你和 AI 说话时，几乎无法像当面认人那样确认「就是它」</blockquote>
+    <p>FlashProve 基于 zkSNARK：离线阶段对权重做承诺；在线阶段对给定提示与输出生成证明文件。在公开的 Llama 4 Maverick（约 4000 亿参数 MoE、4-bit）上，单卡 H100 出证约 110 token/秒，每 1,024 token 请求证明约 19 MB，约为同长提示在 vLLM 上推理 GPU 时间的约 70–95 倍。验证可在 CPU 上完成；公司另提供 Lean 形式化顶层安全性陈述与可审计证明。</p>
+    <p>发布物含博文、技术报告、协议规格、证明器/验证器代码（含 C++ 快验证器与 Lean 可执行验证器）及 Lean 证明，均以 Apache 2.0 开源。Anthropic 强调这是中间进展而非成品：当前证明整数化贪心解码、上下文至多 1,024 token、不隐藏模型架构，且快速可执行代码与 Lean 规格之间尚无形式化等价保证。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://www.anthropic.com/research/provable-inference">Anthropic：Progress on provable inference for large language models（2026-11-02）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。性能数字与限制均出自 Anthropic 研究博文；生产部署时间表与适用模型范围尚未宣布。</p>
+</main>
+  </div>
+</body>
+</html>
