@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthropic：代理记忆的组成——笔记、显著性判断与「做梦」(dreaming) 离线整理；CL-Bench / Pokémon / wiki 等评估 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月7日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>Anthropic：代理记忆的组成——笔记、显著性判断与「做梦」(dreaming) 离线整理；CL-Bench / Pokémon / wiki 等评估</h1>
+  <p class="byline">2026-11-06 · Anthropic</p>
+  <figure class="figure">
+    <img src="../images/ias-fuld-hall.jpg" alt="普林斯顿高等研究院富尔德楼" width="1600" height="1067">
+    <figcaption>相关图片：美国新泽西州普林斯顿高等研究院（IAS）的富尔德楼（2023 年拍摄），用于衬托记忆与知识整理主题，不是 Anthropic 本次研究现场。图片来源：Zeete / <a href="https://commons.wikimedia.org/wiki/File:Fuld_Hall,_Institute_for_Advanced_Study,_Princeton,_NJ_-_looking_north.jpg">维基共享资源</a>，作者本人作品，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>Anthropic Engineering 团队于 2026 年 11 月 6 日发文讨论代理记忆的组成：会话中写笔记、判断显著性，以及用「做梦」(dreaming)——即 sleep-time compute——在交互间隙离线整理日志、纠错并生成新表示。文中由 Lance Martin 执笔，介绍 CL-Bench、Pokémon Red 与文档 wiki 等评估。</p>
+    <blockquote class="pull">随着 dreaming 从 2 次会话扩展到 128 次，25 题得分从 13% 升至 48% 的评分标准</blockquote>
+    <p>在 Pokémon Red 记忆对比中，约 1 万步时 Sonnet 3.7 写出 413 个记忆文件，Fable 5 仅 9 个文件外加顶层 global.md，后者进度更远。对 Stainless 语料构建 wiki 时，随着 dreaming 从 2 次会话扩展到 128 次，25 题得分从 13% 升至 48% 的评分标准。文中强调更强模型更擅自主判断显著性，而 dreaming 可校正错误笔记、构建可检索表示，并把重要内容提升到会话预加载层级。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://www.anthropic.com/research/components-of-agent-memory">Anthropic：The components of agent memory（2026-11-06）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。CL-Bench、Pokémon 文件数与 wiki 得分变化均出自 Anthropic Engineering 博文；记忆系统设计仍在演进，具体产品行为以官方后续说明为准。</p>
+</main>
+  </div>
+</body>
+</html>
