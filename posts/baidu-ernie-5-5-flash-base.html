@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>百度开源权重 ERNIE 5.5 Flash Base：280B 总参 / 每 token 激活约 14B 的 MoE 基座；预训练 33.5T token；许可排除欧盟、英国与韩国 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月8日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="models">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/models.html">模型与产品</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/models.html" data-category="models">模型与产品</a>
+  </div>
+<h1>百度开源权重 ERNIE 5.5 Flash Base：280B 总参 / 每 token 激活约 14B 的 MoE 基座；预训练 33.5T token；许可排除欧盟、英国与韩国</h1>
+  <p class="byline">2026-11-05 · 百度 ERNIE / Hugging Face</p>
+  <figure class="figure">
+    <img src="../images/hangzhou-skyline.jpg" alt="杭州西湖与城市天际线" width="1600" height="1067">
+    <figcaption>相关图片：杭州西湖与城市天际线（资料图），不是百度或 ERNIE 发布现场。图片来源：CatOnMars / <a href="https://commons.wikimedia.org/wiki/File:Huanglong_%26_Broken_Bridge_-_Hangzhou_Skylines.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>百度 ERNIE 团队于 2026 年 11 月 5 日发布 ERNIE-5.5-Flash-Base：稀疏混合专家（MoE）语言模型，总参数约 280B、每 token 激活约 14B；自零预训练约 33.5T token，训练上下文最长约 128K，微调与推理可支持约 1M 上下文。发布的是预训练结束、未经 mid/post-training 的检查点，定位为领域适配、指令微调与强化学习研究的共同起点。权重以 FP8 与 BF16 safetensors 形式在 Hugging Face 等渠道提供。</p>
+    <blockquote class="pull">280B 总参、每 token 激活约 14B；许可 Territory 排除欧盟、英国与韩国</blockquote>
+    <p>架构摘要包括混合 MLA + HCA 注意力、Multi-Router Latent MoE（512 路由专家 top-10 加 1 共享专家）、mHC 残差、MultiMax 输出头与用骨干末层替代 MTP 的 ECHO 等。官方在统一评测管线下报告与 DeepSeek-V4-Flash-Base、Hy3-preview-Base、MiMo-V2.5-Base 等同规模开源基座的对照；例如 MMLU 5-shot 为 93.3，MMLU-Pro 为 78.4，HumanEval+ Pass@1 为 82.3（均出自百度表格）。</p>
+    <p>许可为《ERNIE 5.5 Flash Base Model License Agreement v1.0》：Territory 明确为除欧盟、英国与韩国以外的地区；在 Territory 内可按协议使用、修改与分发，商业使用另有营收门槛与授权条款。超出 Territory 的使用、复制、修改、分发或展示不在本协议授权范围内。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://ernie.baidu.com/release/ernie-5-5-flash-base/">百度 ERNIE：ERNIE 5.5 Flash Base（2026-11-05）</a></li>
+      <li><a href="https://huggingface.co/baidu/ERNIE-5.5-Flash-Base">Hugging Face：baidu/ERNIE-5.5-Flash-Base</a></li>
+      <li><a href="https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/blob/main/LICENSE">LICENSE（v1.0，2026-11-05）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。参数量、评测分数与许可范围均出自百度 / Hugging Face 原文；是否适合特定司法辖区部署请自行阅读完整许可。</p>
+</main>
+  </div>
+</body>
+</html>
