@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>谷歌开源 XLA Serving Engine：以 Apache 2.0 提供「用 Python 训练、用 C++ 推理」运行时；内部已服务超过每秒 600 万次查询 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月9日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>谷歌开源 XLA Serving Engine：以 Apache 2.0 提供「用 Python 训练、用 C++ 推理」运行时；内部已服务超过每秒 600 万次查询</h1>
+  <p class="byline">2026-11-05 · Google Open Source Blog</p>
+  <figure class="figure">
+    <img src="../images/google-gradient-canopy-2025.jpg" alt="加州山景城谷歌 Gradient Canopy 园区外景" width="1600" height="1067">
+    <figcaption>相关图片：加州山景城谷歌 Gradient Canopy 园区外景，不是本次开源发布或推理服务现场。图片来源：<a href="https://commons.wikimedia.org/wiki/File:Google%C2%B4s_Gradient_Canopy,_Mountain_View,_California_19.jpg">维基共享资源</a>，请以该页标注的许可条款为准。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>谷歌开源博客于 2026 年 11 月 5 日宣布推出 XLA Serving Engine（XSE）：面向 OpenXLA 生态的通用模型导出与推理运行时，以 Apache 2.0 许可开源。文章由 Google TPU Software 的 Oleg Shaldybin 与 Monica Song 执笔，目标是打通「Train in Python, Serve in C++」流程——多数工程师用 JAX、PyTorch 等 Python 框架训练，但部分生产环境因运维复杂度不允许运行 Python。用户可通过 API 把模型导出为包含 StableHLO 表示的「XLA SavedModel」，再由 XLA Serving Runtime 加载执行。</p>
+    <blockquote class="pull">短请求场景下，XSE 吞吐量为团队所能构建的最佳 Python 服务器的 2–5 倍；内部已服务超过每秒 600 万次查询</blockquote>
+    <p>官方称这一路径主要用于非大语言模型，以去掉 Python 解释器开销来换取更低延迟和更高吞吐。其研究显示：在短请求场景下，XSE 的吞吐量是团队所能构建的最佳 Python 服务器的 2–5 倍、是简易实现的 8–36 倍，每次预测的 CPU 时间减少 30%–70%，内存约为四分之一。文中写道，去年起已将核心组件投入谷歌内部生产；如今 XSE 服务超过每秒 600 万次查询，支撑 YouTube Shorts、Google Ads、Search 以及 Gemini Omni 的部分在线推理管道。运行时直接封装 PJRT 并由 XLA 编译器优化，支持单机与多机，保存 JAX 计算的 StableHLO 并用 Orbax 存权重，同时提供已在 CPU、GPU 与 TPU 上测试、暴露 gRPC 接口的 Docker 镜像。</p>
+    <p>预览合作方包括 Arm、Intel 与 Moloco。Moloco 员工机器学习工程师 Kunal Kukreja 称，其需求侧平台每天处理超过 6500 亿次推理、峰值达每秒 1050 万次查询。路线图提到计划与 TorchTPU 集成，让 PyTorch 用户也能导出 XLA SavedModel 并在 TPU 上用 C++ 服务；还将先对内、再对外提供提前编译（AOT）以缩短冷启动，并提供 C++ 数据预处理。官方同时提醒：XSE 是轻量的一次性推理引擎，对长上下文的自回归大语言模型，仍建议使用 vLLM 或 SGLang 等项目。代码与快速入门见 GitHub 仓库 openxla/xla-serving。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://opensource.googleblog.com/2026/11/supercharging-xla-inference-xla-serving-engine.html">Google Open Source Blog：Supercharging XLA-based inference: Announcing the launch of XLA Serving Engine（2026-11-05）</a></li>
+      <li><a href="https://github.com/openxla/xla-serving">GitHub：openxla/xla-serving</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。吞吐量倍数、每秒查询量与内部业务覆盖均出自谷歌开源博客的自评与内部数据；适用场景以官方说明的非 LLM、一次性推理为主。</p>
+</main>
+  </div>
+</body>
+</html>
