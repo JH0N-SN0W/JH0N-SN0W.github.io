@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI 发布 Control Room：集中跟踪并停止研究基础设施上的模型工作负载；与错位监测配合，决定干预后 35 秒内停止模型输出；服务自身宕机则闭锁拒绝推理 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月10日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="safety">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/safety.html">安全与治理</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/safety.html" data-category="safety">安全与治理</a>
+  </div>
+<h1>OpenAI 发布 Control Room：集中跟踪并停止研究基础设施上的模型工作负载；与错位监测配合，决定干预后 35 秒内停止模型输出；服务自身宕机则闭锁拒绝推理</h1>
+  <p class="byline">2026-11-09 · OpenAI</p>
+  <figure class="figure">
+    <img src="../images/openai-pioneer-building.jpg" alt="旧金山 Pioneer Building 外景" width="1600" height="804">
+    <figcaption>相关图片：旧金山 Pioneer Building（OpenAI 早期办公地，2019 年拍摄），不是 Control Room 控制台界面。图片来源：HaeB / <a href="https://commons.wikimedia.org/wiki/File:Pioneer_Building,_San_Francisco_(2019)_-1.jpg">维基共享资源</a>，作者本人作品，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>OpenAI 于 2026 年 11 月 9 日在官网发布 Control Room，称随着模型能力增强、安全与安保风险加大，需要更快发现潜在问题并在必要时立刻让模型停下来。Control Room 是一套中央系统，用于跟踪研究基础设施上的模型工作负载，并在出现安全或安保顾虑时迅速停止它们。它接入每一项研究推理负载，包括用于模型训练与评估的代理采样、数据处理等，并与公司的错位监测系统配合工作。该系统已部署在研究基础设施上；对外模型服务栈本身更为集中，已具备在需要时迅速下线部署的运维能力。</p>
+    <blockquote class="pull">自 Control Room 收到停止指令起，到任务无法继续推进，最长间隔为 35 秒；若 Control Room 自身宕机，则拒绝全部推理请求</blockquote>
+    <p>工作方式上，系统把「工作负载」（如强化学习实验、评估或高通量采样）、「推理引擎」（在 GPU 上运行的模型本身）与中央 Control Room 服务连在一起。启动新任务时，工作负载代码向 Control Room 申请 <code>job_id</code>，并须关联一份已批准的安全论证（safety case）；此后每次向引擎采样 token 都带上该 ID，引擎在满足请求前向 Control Room 确认该任务是否仍被允许。一旦人员或监测系统通知停止，Control Room 将该 ID 标为已停止；工作负载代码仍可能继续运行，但引擎必须拒绝后续推理，从而停止继续产生模型输出。公司强调：不依赖多变、分散的工作负载代码去正确执行关停检查，而是把终止机制放在数量很少、部署更统一的推理层。</p>
+    <p>所有前沿强化学习任务都配有监测器（由另一个模型检查受训模型的行为）。监测系统可按情节与严重程度决定停止任务，并告知 Control Room。文中举例称，近期一次与 DNS 相关的事件便由监测器发现。35 秒上限来自推理授权的缓存层，用以支撑所需流量；OpenAI 称正在把这一数字压向零。系统按「闭锁失败」（fail closed）配置：若 Control Room 因故障、被关闭或遭篡改而不可用，则在恢复前拒绝所有推理请求。闭锁失败现已覆盖全部前沿模型研究负载，并将在随后数日完成对其余研究负载的铺开。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://openai.com/index/control-room/">OpenAI：Control Room: A central system to track and stop model workloads across our research infrastructure（2026-11-09）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。Control Room 是 OpenAI 内部研究基础设施上的控制系统，并非对外产品控制台；35 秒上限、闭锁失败覆盖范围与监测示例均出自官网原文。</p>
+</main>
+  </div>
+</body>
+</html>
