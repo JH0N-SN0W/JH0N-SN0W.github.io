@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeepMind 推出 AlphaProof Code：以代理框架形式化验证 Signal 协议实现代码的关键安全性质；称 Gemini Carbon 代理生成超过 600 万行 Lean，全程约四周，并开源形式化验证产物 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月11日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>DeepMind 推出 AlphaProof Code：以代理框架形式化验证 Signal 协议实现代码的关键安全性质；称 Gemini Carbon 代理生成超过 600 万行 Lean，全程约四周，并开源形式化验证产物</h1>
+  <p class="byline">2026-11-10 · Google DeepMind</p>
+  <figure class="figure">
+    <img src="../images/pure-mathematics-formulae-blackboard.jpg" alt="黑板上的数学公式示意" width="1600" height="1067">
+    <figcaption>相关图片：黑板上的数学公式示意（资料图），不是 Signal 协议或 Lean 证明界面。图片来源：Wallpoper / <a href="https://commons.wikimedia.org/wiki/File:Pure-mathematics-formul%C3%A6-blackboard.jpg">维基共享资源</a>，据 Commons 页面称该作品已进入公有领域（PD）。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>Google DeepMind 的 Pushmeet Kohli 与 Swarat Chaudhuri 于 2026 年 11 月 10 日发文，介绍 AlphaProof Code：一套把人类专家与 AI 代理结合的新型形式化验证代理框架，并用于验证 Signal 协议底层密码实现的关键安全性质。Signal 协议保护 Signal 与 Google Messages 等应用中数十亿次私人对话。作者称，这是首次以这一深度用 AI 形式化验证广泛部署的密码协议，也是首次无论是否借助 AI，都对这类广泛部署协议的实现完成形式化验证。</p>
+    <blockquote class="pull">随后由 Gemini Carbon 驱动的代理完成证明，生成超过 600 万行 Lean；验证过程只用了四周，而历史上专家团队往往需要数年。</blockquote>
+    <p>框架把工作按研究团队方式拆分：人类专家与 AI 共同决定要证明什么，再由一组代理完成证明。研究者先与多种模型协作，把 Signal 的安全目标翻译成形式化数学规范，并由人类专家逐条审阅；随后由 Gemini Carbon 驱动的代理完成证明，生成超过 600 万行 Lean（一种用于数学证明代码正确性的计算机语言）。代理随后审计证明，并标出需要人类再看的部分——公司称只约占代码库的百分之一，其余由 Lean 自动检查。文章举例：证明编译后的代码满足关键安全性质，例如在设备被暂时攻破之前与之后仍能保护消息。即便有此复杂度，验证过程只用了四周，而历史上专家团队往往需要数年。为确认系统能区分正确代码与有缺陷代码，研究者把两个此前已修复的真实漏洞重新引入隔离版本的 Signal 代码，两次都得到机器检查的证明：有缺陷版本是不安全的。</p>
+    <p>Signal 首席技术官 Ehren Kret 在文中表示：以往形式化验证多聚焦代码的较小部分，Google DeepMind 的方法使范围显著扩大；用 AI 代理把实时代码翻译成有效的 Lean 定理是重大突破。DeepMind 写道，将开源其形式化验证产物供社区使用，并认为把这些技术与 CodeMender 一类自动防御代理配合，有助于应对由代理驱动的网络威胁。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://deepmind.google/blog/introducing-alphaproof-code/">Google DeepMind：Introducing AlphaProof Code: a breakthrough in verifying complex software at depth（2026-11-10）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。证明规模、耗时、「首次」表述与漏洞回放实验均出自 DeepMind 官方博文及文中引用的 Signal 方面评论，未独立复现证明或审计开源产物。</p>
+</main>
+  </div>
+</body>
+</html>
