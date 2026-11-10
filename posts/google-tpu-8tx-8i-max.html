@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>谷歌推出 TPU 8tx 与 TPU 8i Max：第八代组合一年内扩至四套系统；8tx 面向机密推理，8i Max 将两颗 8i 封装在同一封装上，算力、SRAM 与 HBM 带宽均为 8i 的两倍 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月11日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="chips">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/chips.html">芯片与算力</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/chips.html" data-category="chips">芯片与算力</a>
+  </div>
+<h1>谷歌推出 TPU 8tx 与 TPU 8i Max：第八代组合一年内扩至四套系统；8tx 面向机密推理，8i Max 将两颗 8i 封装在同一封装上，算力、SRAM 与 HBM 带宽均为 8i 的两倍</h1>
+  <p class="byline">2026-11-09 · Google</p>
+  <figure class="figure">
+    <img src="../images/silicon-wafer-450mm.jpg" alt="半导体分析师手持一片 450 毫米硅晶圆" width="1600" height="1067">
+    <figcaption>相关图片：半导体分析师 Dan Hutcheson 手持一片 450 毫米硅晶圆（2012 年拍摄），不是谷歌 TPU 8tx 或 8i Max 产品照。图片来源：Intel Free Press / Flickr / <a href="https://commons.wikimedia.org/wiki/File:Dan_Hutcheson,_semiconductor_industry_analyst_and_CEO_of_VLSI_Research_holds_up_a_450mm_silicon_wafer.jpg">维基共享资源</a>，<a href="https://creativecommons.org/licenses/by/2.0/deed.zh">CC BY 2.0</a>。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>谷歌 AI 与基础设施高级副总裁兼首席技术专家 Amin Vahdat 于 2026 年 11 月 9 日发文，宣布推出 TPU 8tx 与 TPU 8i Max，使第八代 TPU 组合在一年内扩大到四套系统。这四套系统是：面向大规模训练的 TPU 8t、面向实时推理的 TPU 8i、面向安全与机密推理的新系统 TPU 8tx，以及面向超大上下文窗口、并被称作每机架算力密度最高的 TPU 8i Max。Vahdat 写道，这是公司首次在同一年推出四套 TPU 系统。文中称，TPU 现有近 100 家外部客户，包括前沿实验室、交易公司、零售商与大学等。</p>
+    <blockquote class="pull">这是公司首次在同一年推出四套 TPU 系统：8t 负责规模化训练，8i 负责低延迟推理，8tx 负责机密计算，8i Max 负责超大上下文与最高机架算力密度。</blockquote>
+    <p>关于「新芯片」与「新系统」的区别，文章解释：新芯片需在硅晶圆上布置晶体管，受物理与漫长制造周期约束；新系统则是围绕芯片组织计算、网络与存储，包括封装方式，以便更快响应客户与研究需求。TPU 8tx 基于与 TPU 8t 相同的硅，并搭配第 5 代 AMD EPYC CPU 主机，把安全做进硬件层，使敏感数据与模型权重在使用中仍保持受保护与隔离；它还采用为实时推理打造的低延迟 Boardfly 网络，称相对 TPU 8t 延迟可降低至多约两倍，性能损失接近于零。该系统也适合小规模训练，使团队能在同一套系统上用私有数据微调、把大模型蒸馏成小模型，并通过强化学习训练代理，而无需在不同集群间迁移敏感数据。</p>
+    <p>TPU 8i Max 针对内存墙：把两颗低延迟 TPU 8i 芯片组合到同一封装上，算力、SRAM 与 HBM 带宽均为 TPU 8i 的两倍，并在既有机架占地内放入两倍硅，以提高单位面积与单位功耗的算力。文章把四套系统的分工概括为：8t 负责规模化训练，8i 负责低延迟推理，8tx 负责机密计算，8i Max 负责超大上下文与最高机架算力密度。文中还提到近期对 PyTorch 的支持（包括开源 TorchTPU）、TPU Sync、Cloud Pathways 与 GKE 动态切片等软件更新。官方并预告当日太平洋时间上午 9 点的直播。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/">Google：Our newest TPUs: 8tx and 8i Max, built for the agentic era（2026-11-09，Amin Vahdat）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。客户数量、延迟与带宽倍数等数据均出自谷歌官方博文，未独立实测。供应范围与软件预览状态以原文为准。</p>
+</main>
+  </div>
+</body>
+</html>
