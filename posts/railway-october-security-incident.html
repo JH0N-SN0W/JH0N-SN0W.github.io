@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Railway 发布 10 月安全事件详细报告：攻击者至多可能解密约 1.85%（约 10 万个）工作区的客户变量；未授权密钥消费估计约 74 万美元，公司称将为不愿退款的供应商垫付 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月12日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="safety">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/safety.html">安全与治理</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/safety.html" data-category="safety">安全与治理</a>
+  </div>
+<h1>Railway 发布 10 月安全事件详细报告：攻击者至多可能解密约 1.85%（约 10 万个）工作区的客户变量；未授权密钥消费估计约 74 万美元，公司称将为不愿退款的供应商垫付</h1>
+  <p class="byline">2026-11-10 · Railway</p>
+  <figure class="figure">
+    <img src="../images/server-room-pd.jpg" alt="服务器机房资料图" width="1600" height="1200">
+    <figcaption>相关图片：服务器机房（瑞典皇家理工学院并行计算中心，2010 年拍摄），不是 Railway 的基础设施或本次事件现场。图片来源：Esquilo / <a href="https://commons.wikimedia.org/wiki/File:PDC_server_room.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">CC BY-SA 3.0</a> 授权，可署名转载。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>云托管平台 Railway 于 2026 年 11 月 10 日在博客发布《Incident Report: October 21st Security Attack》，并注明最后更新时间为 11 月 10 日 18:02 UTC，作为此前初步报告的详细后续。报告称，10 月 20 日 13:58 UTC，工程师发现有威胁行为者已在其系统内获得未授权访问；在此期间，攻击者能够串联多种漏洞、横向移动，并最终获取并解密一部分客户变量，范围至多为 1.85%（约 10 万个）的工作区，之后被驱逐且不再有访问权限。报告写明：攻击始于 10 月 20 日 07:28 UTC 对当时未知的构建基础设施漏洞的利用，至 10 月 21 日 09:24 UTC 攻击者被完全清除。公司称，根据取证，相信攻击者的具体目标是人工智能服务商的凭证，以便出售给分散的中转点用于蒸馏（distillation）。</p>
+    <blockquote class="pull">根据现有日志，我们能够确认至多 1.85% 的工作区（约 10 万个）可能有任何环境变量被解密。该数字是上限。</blockquote>
+    <p>报告说，现有日志可以确认，至多 1.85% 的工作区、约 10 万个，可能有任何环境变量被解密；日志识别的是环境子集而非单个变量，因此该数字是上限。被解密的数据还包括 1,852 名用户的关联账户令牌（自带密钥的代理密钥与 GitHub OAuth 令牌）；公司称已重置这些令牌并通知用户，且未发现有人使用此次窃取的凭证登录 Railway 账户。未授权密钥消费估计约达 74 万美元。公司还写明，攻击者在 10 月 20 日 13:50 至 15:30 UTC 读取了 353 次构建的存储历史（含密封变量）。事件期间，自 10 月 21 日 09:25 UTC 起，Railway 曾要求 GitHub、GitLab、Anthropic、OpenAI、OpenRouter、SpaceXSI、Google 与 Stripe 撤销可能已泄露的密钥。</p>
+    <p>应对措施包括：10 月 20 日 17:03 UTC 与 10 月 21 日 07:22 UTC 两次暂停构建，轮换内部凭证，并于 10 月 21 日 20:19 UTC 作废全部用户会话和令牌；在显著加固基础设施后，于 10 月 22 日 22:49 UTC 为所有方案恢复构建。关于退款，报告称正在与有记录影响的人工智能令牌服务商协调退还未授权消费：AWS Bedrock 与 Google Gemini 的既有退款政策覆盖欺诈，账户团队已为客户启动退款；OpenAI 与 SpaceXSI 建议受影响客户提出申请并由双方共同审阅；OpenRouter 选择按其服务条款执行不退款政策，Railway 表示将承担与此次事件相关的全部 OpenRouter 费用，并称对不愿承担的服务商将自行垫付令牌损失。报告还提到已向美国联邦调查局互联网犯罪投诉中心（IC3）提交正式投诉，并在聘请专业取证机构，调查仍在进行。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://blog.railway.com/p/incident-report-october-security-incident">Railway Blog：Incident Report: October 21st Security Attack（2026-11-10，文内注明最后更新 18:02 UTC）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。受影响工作区比例、消费估计、时间线与退款安排均转述 Railway 当日详细事件报告；报告写明约 10 万个工作区为上限，取证调查仍在进行，最终影响范围以公司后续披露为准。</p>
+</main>
+  </div>
+</body>
+</html>
