@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeepMind 发布 AlphaGenome 2：按特定人类细胞类型预测 DNA 序列及其变异的影响；称在 TenK10K 数据集上识别因果变异的比例为 30%，对照此前模型微调后的 16%；已通过 API 向非商业研究开放，并提供商业研究私人预览；公司写明尚未获批用于临床或诊断 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月13日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>DeepMind 发布 AlphaGenome 2：按特定人类细胞类型预测 DNA 序列及其变异的影响；称在 TenK10K 数据集上识别因果变异的比例为 30%，对照此前模型微调后的 16%；已通过 API 向非商业研究开放，并提供商业研究私人预览；公司写明尚未获批用于临床或诊断</h1>
+  <p class="byline">2026-11-11 · Google DeepMind</p>
+  <figure class="figure">
+    <img src="../images/nci-scientist-laboratory-2005.jpg" alt="美国国家癌症研究所实验室中工作的科研人员" width="1600" height="1393">
+    <figcaption>相关图片：美国国家癌症研究所实验室中一名科研人员在工作（资料照片），不是 AlphaGenome 2 的研发或评测现场。图片来源：美国国家癌症研究所 / <a href="https://commons.wikimedia.org/wiki/File:Scientist_working_in_laboratory.jpg">维基共享资源</a>，属美国联邦政府作品，公有领域，可自由转载。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>谷歌 DeepMind 于 2026 年 11 月 11 日宣布推出 AlphaGenome 2。作者包括 Adam Gayoso、Natasha Latysheva、Pushmeet Kohli 与 Žiga Avsec。博文称，这是下一代 DNA 序列模型，用于预测 DNA 序列及其变异如何影响特定人类细胞类型，以帮助科学家寻找疾病的细胞层面驱动因素。公司写道，AlphaGenome 2 识别出会改变细胞内基因表达的变异的数量，约为此前最先进模型的近两倍；训练数据包括来自 68 种组织、超过 1 亿个单细胞图谱，另处写明训练使用了人类与小鼠的群体与单细胞数据，含逾 1.07 亿个单细胞图谱。该模型即日起通过 AlphaGenome API 向非商业研究开放，并提供商业研究的私人预览。</p>
+    <p>与第一代并行预测多种组织平均结果的做法不同，AlphaGenome 2 被设计为条件模型：在约 100 万个碱基的 DNA 序列之外，还在架构各阶段输入目标生物学条件（组织、细胞类型或状态）。公司称，这使模型可以学习同一段 DNA 在不同细胞类型中如何被读取，并可根据一种已测指标去推测尚未测量的性质。在 TenK10K 数据集（28 种原发性免疫细胞类型的大型单细胞图谱）上，DeepMind 称 AlphaGenome 2 能可靠识别的因果变异比例为 30%、对照此前在单细胞数据上微调的原模型及其他专用工具的 16%；方向性基因效应为 43%，对照 23%。</p>
+    <blockquote class="pull">AlphaGenome 2 识别出会改变细胞内基因表达的变异的数量，约为此前最先进模型的近两倍。</blockquote>
+    <p>博文还称，研究人员可上传仅数十个细胞的单细胞 RNA 测序快照，无需重新训练即可把模型条件化到未见过的细胞状态，例如疾病或疫苗接种后的状态。公司并预计算了与性状相关的变异在数百种人类细胞与组织条件下的预测，以帮助把全基因组关联研究中的信号对应到具体变异、靶基因和细胞类型。文章结尾写明：AlphaGenome 与 AlphaGenome 2 仅供研究使用，尚未经过验证或批准用于临床或诊断目的。配套的 GitHub 软件库亦于 11 月 11 日发布 v2.0.0。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/">Google DeepMind：AlphaGenome 2: Deciphering how cells read DNA to better understand disease（2026-11-11）</a></li>
+      <li><a href="https://github.com/google-deepmind/alphagenome/releases/tag/v2.0.0">GitHub：google-deepmind/alphagenome 发布 v2.0.0（2026-11-11）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。模型能力、评测比例与使用范围均出自 DeepMind 官方博文，未独立复现；文中写明该模型尚未获批用于临床或诊断。</p>
+</main>
+  </div>
+</body>
+</html>
