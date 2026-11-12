@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>谷歌推出 Gemini Decisions API，由新模型 Gemini Decision 1 驱动：一次请求最多评估 1,000 道是非、选择题或量表题，共享输入可含文本、图像、音频、视频与 PDF；称端到端延迟 150 至 250 毫秒，定价为每百万输入 token 0.10 美元、输出 token 不计费 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月13日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="models">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/models.html">模型与产品</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/models.html" data-category="models">模型与产品</a>
+  </div>
+<h1>谷歌推出 Gemini Decisions API，由新模型 Gemini Decision 1 驱动：一次请求最多评估 1,000 道是非、选择题或量表题，共享输入可含文本、图像、音频、视频与 PDF；称端到端延迟 150 至 250 毫秒，定价为每百万输入 token 0.10 美元、输出 token 不计费</h1>
+  <p class="byline">2026-11-11 · Google DeepMind / Google</p>
+  <figure class="figure">
+    <img src="../images/googleplex-outside-2017.jpg" alt="加州山景城谷歌总部 Googleplex 外景" width="1600" height="1067">
+    <figcaption>相关图片：加州山景城谷歌总部 Googleplex 外景（2017 年拍摄），不是本次 API 发布会现场。图片来源：David Nagle / <a href="https://commons.wikimedia.org/wiki/File:Outside_Googleplex_in_Mountain_View,_California.jpg">维基共享资源</a>，作者本人作品，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>谷歌 DeepMind 产品经理 Min Choi 与首席科学家 Felix Yu 于 2026 年 11 月 11 日发文，宣布推出 Gemini Decisions API。该接口由新模型 Gemini Decision 1（gemini-decision-1）驱动，已通过 Google AI Studio 中的 Gemini API 提供，用于快速的封闭集合决策。公司称，开发者可传入一段共享的多模态输入（文本、图像、音频、视频与 PDF，最多 256K token），并附上最多 1,000 道相互独立的问题。Gemini Decision 1 不按 token 逐个生成答案文本，而是在一次前向计算中为候选选项打分，返回概率与置信度；文中称端到端延迟为 150 至 250 毫秒，定价为每百万输入 token 0.10 美元，输出 token 不计费。</p>
+    <p>问题类型包括：noul（是/非，可附上真、假判定说明）；choice（选择题，2 至 255 个选项，返回胜出项及各候选的归一化概率）；score（有序量表，从 0 起评分，返回连续加权分及各档概率）。每个答案都带有 0 到 1 的置信度，便于把不确定情形转给备用逻辑或人工审核。共享的 input 按每次请求计费一次，与评估多少道题无关（各题只额外计入自身说明和标准所用 token）。</p>
+    <blockquote class="pull">该接口由新模型 Gemini Decision 1 驱动，已通过 Google AI Studio 中的 Gemini API 提供，用于快速的封闭集合决策。</blockquote>
+    <p>谷歌称，团队已把它用作低延迟控制层，例如：Gemini Notebook 用其做实时路由，为日常查询选择合适的模型档位与思考深度，文中称可使日常查询延迟降低最多 40%；Stitch 的快速画布实验用它在数秒内生成可操作的线框；Google Labs 的 CC 用它从 200 多个选项中选择表情反应；搜索则用它在延迟范围内检测针对 MCP 工具的对抗行为。Gemini Decision 1 另有可在 Google AI Studio 中用于原型开发的 API 免费额度。文中称，OpenRouter、LangChain、Vercel、LiteLLM、Pydantic AI、Pipecat、LiveKit 与 OpenCode 等生态集成正在随 google-genai SDK 推出，对 Google Cloud 中 Gemini 的支持即将到来。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/">Google：Gemini Decisions API: Fast, calibrated multimodal decisions（2026-11-11，Min Choi、Felix Yu）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。延迟、定价、题型与内部产品用法均出自谷歌官方博文，未独立评测。</p>
+</main>
+  </div>
+</body>
+</html>

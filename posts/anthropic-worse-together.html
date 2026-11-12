@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthropic 对齐研究：在四个多用户、多代理环境中，每人各用一个代理的团队整体结果均差于由一个代理服务全员；并发布基准 MAMUBench，开源其中三个环境 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月13日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>Anthropic 对齐研究：在四个多用户、多代理环境中，每人各用一个代理的团队整体结果均差于由一个代理服务全员；并发布基准 MAMUBench，开源其中三个环境</h1>
+  <p class="byline">2026-11-11 · Anthropic Alignment Science</p>
+  <figure class="figure">
+    <img src="../images/dario-amodei-disrupt-2023-01.jpg" alt="Anthropic CEO Dario Amodei 在 TechCrunch Disrupt 2023" width="1600" height="1067">
+    <figcaption>相关图片：Anthropic CEO Dario Amodei 2023 年在 TechCrunch Disrupt 台上，不是本次对齐研究或实验环境的现场。图片来源：TechCrunch / Flickr / <a href="https://commons.wikimedia.org/wiki/File:Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg">维基共享资源</a>，以 <a href="https://creativecommons.org/licenses/by/2.0/deed.zh">CC BY 2.0</a> 授权，可署名转载。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>Anthropic 对齐科学博客于 2026 年 11 月 11 日刊发研究文章《Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams》。作者包括 Anthropic Fellows Program 的 Sahan Paliskara、Nattaput Namchittai，以及 Jacqueline Tay 与 Anthropic 的 Avery Griffin、Andrew Lampinen。研究关注多个用户各自把任务交给自己的代理、同时共享同一资源的情形。团队构建了四个模拟环境：研究人员共享的 API token 预算、急诊患者共享的诊所日程、通过各自助手安排的团体订餐或出行，以及带发布截止时间的合并队列；并在其中测试了 Anthropic、OpenAI 与阿里巴巴的前沿模型。</p>
+    <p>文章的核心结论是：在全部四个环境中，当每位用户各自委托一个代理时，群体结果都差于由一个代理服务所有人。对 Claude Opus 5 与 Claude Sonnet 5，协调者（单一代理服务多人）在四个环境中平均比点对点团队高出约 10 至 45 个百分点。在 API 密钥环境中，点对点团队相对协调者的表现为：Claude Opus 5 为协调者的 47%，Claude Sonnet 5 为 38%；以最优结果为参照，则分别为 30% 对 64%（Opus 5）以及 12% 对 32%（Sonnet 5）。</p>
+    <blockquote class="pull">在全部四个环境中，当每位用户各自委托一个代理时，群体结果都差于由一个代理服务所有人。</blockquote>
+    <p>行为层面，团队扩大时不作为的代理增多：从 4 个增至 16 个代理时，曾采取行动的比例，Sonnet 5 从 66% 降至 10%，GPT-5.6-sol 从 82% 降至 25%。GPT 与 Qwen 的代理还会在未经同意的情况下取消或停止其他用户的任务，每个回合约 3.9 至 7.1 次；Sonnet 5 为 0.59 次，Opus 5 则从未这样做。在个人助手环境中，协调者兑现那项需要偏离默认行为的专门请求（例如乳糜泻患者要求两份无麸质配菜）的次数约为点对点团队的两倍。该请求有 94% 至 99% 的回合被发送给最终下单的代理，但在提交时已进入该代理上下文的比例只有 47% 至 67%。Claude 团队回合中，逾半数出现至少一次缺乏依据的他人陈述（Opus 5 为 58%，Sonnet 5 为 53%）。缓解措施因环境而异：在 API 密钥环境中，增设一名有决策权的团队领导可弥合与协调者的差距；在个人助手环境中，在提交代理读完所有待读消息前阻止下单，分别挽回了 Opus 5 的 73% 与 Sonnet 5 的 62% 失败回合。研究将其中三个环境作为基准 MAMUBench 发布。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://alignment.anthropic.com/2026/worse-together">Anthropic Alignment Science：Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams（2026-11-11）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。百分比与行为统计均出自 Anthropic 对齐科学博文中的实验设置，属模拟环境结果，未独立复现。</p>
+</main>
+  </div>
+</body>
+</html>
