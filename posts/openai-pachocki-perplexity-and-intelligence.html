@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI 首席科学家 Jakub Pachocki 发表《Perplexity and Intelligence》：主张把困惑度（或等价的交叉熵损失）作为比较各模型开发者并制定共同安全标准的指标；并建议设定以困惑度等测量为依据的共同上限，在理解并监测人工智能行为的能力达到某一具体里程碑（例如开发出思维链监测的后继方法）之前，开发者承诺不越过该上限 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月25日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="safety">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/safety.html">安全与治理</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/safety.html" data-category="safety">安全与治理</a>
+  </div>
+<h1>OpenAI 首席科学家 Jakub Pachocki 发表《Perplexity and Intelligence》：主张把困惑度（或等价的交叉熵损失）作为比较各模型开发者并制定共同安全标准的指标；并建议设定以困惑度等测量为依据的共同上限，在理解并监测人工智能行为的能力达到某一具体里程碑（例如开发出思维链监测的后继方法）之前，开发者承诺不越过该上限</h1>
+  <p class="byline">2026-11-22 · OpenAI</p>
+  <figure class="figure">
+    <img src="../images/openai-pioneer-building.jpg" alt="旧金山 Pioneer Building 外景" width="1600" height="804">
+    <figcaption>相关图片：旧金山 Pioneer Building（OpenAI 早期办公地，2019 年拍摄），不是本次文章发布现场。图片来源：HaeB / <a href="https://commons.wikimedia.org/wiki/File:Pioneer_Building,_San_Francisco_(2019)_-1.jpg">维基共享资源</a>，作者本人作品，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>OpenAI 于 2026 年 11 月 22 日在官网发布由首席科学家 Jakub Pachocki 署名的文章《Perplexity and Intelligence》（困惑度与智能）。作者主张，把困惑度（perplexity，或与之等价的交叉熵损失）确立为一项指标，用于在不同模型开发者之间进行比较，并为共同的安全标准提供依据。作为第一步，他在文中披露了 OpenAI 预训练进展的更多内部测量。他写道，公布这些内部困惑度测量经过了权衡：它会让竞争者更清楚地看到该公司所处位置，但这一顾虑被「在全行业建立共同安全措施的紧迫性」所压过。他表示，希望这成为迈向为未来节奏安排建立共同科学基础的一步。</p>
+    <blockquote class="pull">我进一步建议设定共同上限，以困惑度和其他测量为依据，各开发者承诺在我们理解并监测人工智能行为的能力达到某个具体里程碑之前，不越过该上限。</blockquote>
+    <p>文章把人工智能开发简化为：先建造大型计算机，再在大量非结构化数据上预训练一个模型（压缩机），随后再用提示、微调或强化学习等方法引出该模型中的潜在能力。作者称，衡量这一「智能基底」进展的主要方式多年来保持稳定，即跟踪模型在留出数据集上的困惑度；困惑度衡量模型平均而言对下一个 token 的预测效果，数值越低表示预测越好。文中开头的图展示了自 GPT‑3.5 以来该指标的变化。他给出一组对数困惑度（文中说明实务上跟踪的是困惑度的对数，也称交叉熵损失）数字：GPT‑3.5 在其当前主要评估数据集上约为 0.99，能够进行流畅对话，并构成最初 ChatGPT 的基础；GPT‑4 约为 0.91，能够有效利用思维链推理，这促使了随后对这一能力的定向引出，以及现代推理模型的出现；当损失降至 0.8 以下，公司称已在网络安全和数学等领域看到变革性能力的出现。作者强调，事先并不清楚这些能力会在这些精确的困惑度阈值被达到时出现，它们可被看作这一项指标进展所带来的涌现性潜在能力。脚注写明，自 GPT‑3.5 以来主要使用的留出数据集来自其内部代码库，文中报告的是固定快照上的数字。</p>
+    <p>Pachocki 写道：“I further propose common limits, based on perplexity and other measurements, that developers are committed to not crossing until our ability to understand and monitor AI behavior achieves a certain concrete milestone (such as the development of a successor to CoT monitors).”（我进一步建议设定共同上限，以困惑度和其他测量为依据，各开发者承诺在我们理解并监测人工智能行为的能力达到某个具体里程碑之前——例如开发出思维链监测的后继方法——不越过该上限。）他希望形成一项行业标准：规定以可在各实验室之间跟踪的关键指标来衡量的第一道开发上限，以及在越过该上限之前需要具体实现什么；并希望由此通向设定后续上限、安排进一步发展节奏的共同框架。他预计，随着进入约 0.68–0.7 的对数困惑度区间，还应期待进一步的变革性能力，他不知道那些能力会是什么，今天也未必正在测试它们；同时，还应预期目前占主导的对齐审计形式会进一步退化，以及评估意识和训练意识进一步增强。他并写道，在对数困惑度约 0.76 的模型上，开放数学问题开始产生突破性结果；据此外推，最早在 2027 年，深度学习研究中也可能出现类似的基础性预训练进展浪潮。他认为，人工智能也会显著促进对齐与监测方面的进展，但这些进展不太可能快到足以匹配预训练可能达到的全部加速潜力。</p>
+    <p>文章也列出把困惑度作为共同指标的挑战：各实验室评估数据集与训练数据配比不同，难以直接比较；困惑度并不直接对应人们关心的具体任务；它无法计入预训练之外的进展，尤其是思维链推理并不会降低模型达到的困惑度，却会大幅提高能力；以及未知的下限——并不预期能达到损失为 0，也不知道数据固有熵是多少。作者称，尽管存在这些困难，困惑度作为许多研究团队长期投入优化的指标经受了时间检验，并继续在通用智能上带来稳定收益。他希望看到全行业在这一指标上有更多透明度。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://openai.com/index/perplexity-and-intelligence/">OpenAI：Perplexity and Intelligence，Jakub Pachocki（2026-11-22）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。文中的对数困惑度数值、能力判断、时间估计与政策建议，均转述 Pachocki 11 月 22 日这篇署名文章，不构成对相关能力、时间表或行业标准的独立评估。</p>
+</main>
+  </div>
+</body>
+</html>

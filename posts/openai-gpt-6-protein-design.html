@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI 发布《GPT-6 models demonstrate intrinsic protein-design capabilities》：称 GPT-6 系列模型可仅凭推理与代码设计新的蛋白质结构与氨基酸序列，而无需调用专用生物学模型来生成这些设计；与研究伙伴 Onava 的实验室测试中，基于 GPT-6.2 设计的蛋白质在五个靶点上显示出结合证据，322 个 minibinder 中有 35 个（10.9%）对预定靶点呈结合阳性；文章同时写明，筛选候选物仍依赖专用结构预测模型，尚未证明可在零样本条件下端到端生成全新 minibinder — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月25日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="research">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/research.html">开源与研究</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/research.html" data-category="research">开源与研究</a>
+  </div>
+<h1>OpenAI 发布《GPT-6 models demonstrate intrinsic protein-design capabilities》：称 GPT-6 系列模型可仅凭推理与代码设计新的蛋白质结构与氨基酸序列，而无需调用专用生物学模型来生成这些设计；与研究伙伴 Onava 的实验室测试中，基于 GPT-6.2 设计的蛋白质在五个靶点上显示出结合证据，322 个 minibinder 中有 35 个（10.9%）对预定靶点呈结合阳性；文章同时写明，筛选候选物仍依赖专用结构预测模型，尚未证明可在零样本条件下端到端生成全新 minibinder</h1>
+  <p class="byline">2026-11-24 · OpenAI</p>
+  <figure class="figure">
+    <img src="../images/nci-scientist-laboratory-2005.jpg" alt="美国国家癌症研究所实验室中工作的科研人员" width="1600" height="1200">
+    <figcaption>相关图片：美国国家癌症研究所（NCI）实验室中一名科研人员在工作（2005 年拍摄），不是 OpenAI 或研究伙伴 Onava 的实验室现场，也不是本次蛋白质设计实验的照片。图片来源：Diane A. Reid / National Cancer Institute / <a href="https://commons.wikimedia.org/wiki/File:Scientist_working_in_laboratory.jpg">维基共享资源</a>；属美国联邦政府公有领域，可自由转载。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>OpenAI 于 2026 年 11 月 24 日发布科学博文《GPT-6 models demonstrate intrinsic protein-design capabilities》，并介绍预印本文《GPT-6 as a Universal Foundation Model for Protein Biology: Beyond Specialized Models》。文章的关键发现写道，其 GPT-6 系列模型可以仅凭推理与代码设计新的蛋白质形状及其化学构件（氨基酸）序列，而无需调用专用生物学模型来生成这些设计；一篇内部研究模型在多项蛋白质设计任务上达到或超过了专用模型；研究人员还可以通过提示，引导模型设计蛋白质应结合的位置与应采取的形状。</p>
+    <p>该博文称，与研究伙伴 Onava 进行的实验室测试中，基于 GPT-6.2 设计的蛋白质在五个靶点上显示出结合（binding，即附着）证据；经重新设计的抗体也保留了结合能力。文章同时写明，专用模型帮助提供了序列，并协助筛选送测候选物。文中还指出，模型写出的推理与代码表明，它们会借助数学、物理、化学与生物学知识来思考蛋白质形状及其与其他分子的相互作用。在计算评估中，文章称最新模型在多数任务上与专用模型相当或更好，但预测完整蛋白质结构仍是明显短板。</p>
+    <p>在第一项实验室实验中，研究团队向 GPT-6.2 提供五个靶蛋白的三维结构，并标出希望 minibinder（小型结合蛋白）附着的位置；模型随即编写代码生成候选物的三维设计，而没有使用专用蛋白质人工智能模型。文章写明，为把这些三维设计变成可在实验室测试的蛋白质，团队使用专用模型 SolubleMPNN 为每项设计建议氨基酸序列，其他专用蛋白质模型则帮助筛选预计能按设计折叠并在预定位点结合的候选物。实验室共测试了针对 5 个靶点的 322 个 minibinder，其中 35 个（10.9%）对预定靶点呈结合阳性：PD-L1 有 5 个阳性，IL-7Rα 有 3 个，TrkA 有 1 个，VEGF-A 有 8 个，IL-17A 有 18 个。文章称，原先的 RFdiffusion 研究报告了更高的阳性率，但阳性率在很大程度上取决于送测前的筛选严格程度以及对结合的定义；尽管如此，结果提供了早期证据，表明可以把 GPT-6.2 的三维设计做成能在实验室中与预定靶点结合的蛋白质。</p>
+    <p>第二项实验测试 GPT-6.2 能否自行设计序列。文章写道，在以已有 minibinder 的计算预测结构为起点、并隐去原序列的初步实验室筛选中，针对 MDM2 的 88 个设计里有 75 个（85%）出现结合，针对 VEGF-A 的 42 个里有 26 个（62%），针对 PD-1 的 59 个里有 8 个（14%）；GPT-6.2 提出的氨基酸序列与原 minibinder 序列的中位差异分别为 VEGF-A 50%、MDM2 43%、PD-1 15%。对于该模型早先生成、且尚未发表的三种 minibinder 形状，在 107 个由 GPT-6.2 新序列制成的蛋白质中，有 14 个（13.1%）显示出结合。在抗体结合环改造方面，文章称：以与 IL-4Rα 结合的 6 种小型抗体（VHH）为起点，在测试的 182 个设计中，有 128 个（70%）显示出对 IL-4Rα 的结合迹象；另对 5 种治疗性抗体改写约一半结合环氨基酸后，在 272 个片段中有 179 个（66%）对原靶点 PD-1 或 PD-L1 显示出结合。</p>
+    <blockquote class="pull">实验室结果能更直接地检验所提出的设计能否起作用，但结合只是迈向有用研究工具或药物的一步。</blockquote>
+    <p>在题为「Limitations」的部分，文章强调，此次蛋白质设计流程仍依赖 Boltz-2、OpenDDE 和 ESMFold2 等专用结构预测模型来筛选候选物；结果显示，GPT 模型在骨架生成（研究人员通常使用 RFdiffusion）和序列再设计（通常使用 ProteinMPNN）这两个阶段具有与专用模型相当的内在能力，但「因此尚未证明我们的模型可以在没有专用模型帮助的零样本设定下，端到端生成全新 minibinder」。文章并写道，从氨基酸序列预测完整蛋白质结构，对它们的模型来说仍明显难于上述若干分项任务，即便最好的内部模型在这一任务上也远落后于专用结构预测模型。文中还提醒，结合只是迈向有用研究工具或药物的一步，后续还需要确认特异性、稳定性、生物学活性，以及治疗用途上的安全性与有效性。OpenAI 称这项工作是迈向可编程分子设计的早期一步，并提到《Preparedness Framework》用于评估与生物安全相关的风险、测试防护措施。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/">OpenAI：GPT-6 models demonstrate intrinsic protein-design capabilities（2026-11-24）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。模型能力表述、与 Onava 的实验室数字、阳性率及文章自行列出的限制，均转述 OpenAI 11 月 24 日科学博文。文中预印本文标题按原文写为《GPT-6 as a Universal Foundation Model for Protein Biology: Beyond Specialized Models》；本篇未另行核对预印本全文。专用模型参与序列建议与候选筛选，以及「尚未证明可零样本端到端生成」的限定，均按原文保留。</p>
+</main>
+  </div>
+</body>
+</html>

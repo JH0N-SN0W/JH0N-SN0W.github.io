@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thinking Machines Lab 发布 Inkling 2 Mini：称其为可在笔记本电脑上运行的循环 Transformer 混合专家模型，总参数 264 亿、激活 34 亿，计入循环后每 token 权重激活为 54 亿；显存占用约 20GB；并称在不足 1000 亿总参数的开源权重模型中，DeepSWE v1.1 为 48.2%、Vals Index v2.2 为 46.5%，均居首位；已开放权重，并在 Tinker 提供推理与定制 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月25日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="models">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/models.html">模型与产品</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/models.html" data-category="models">模型与产品</a>
+  </div>
+<h1>Thinking Machines Lab 发布 Inkling 2 Mini：称其为可在笔记本电脑上运行的循环 Transformer 混合专家模型，总参数 264 亿、激活 34 亿，计入循环后每 token 权重激活为 54 亿；显存占用约 20GB；并称在不足 1000 亿总参数的开源权重模型中，DeepSWE v1.1 为 48.2%、Vals Index v2.2 为 46.5%，均居首位；已开放权重，并在 Tinker 提供推理与定制</h1>
+  <p class="byline">2026-11-20 · Thinking Machines Lab</p>
+  <figure class="figure">
+    <img src="../images/macbook-pro-16-m4-pro-2025.jpg" alt="Apple 零售店里展示的银色 16 英寸 MacBook Pro（M4 Pro）" width="1600" height="1200">
+    <figcaption>相关图片：Apple 零售店里展示的银色 16 英寸 MacBook Pro（M4 Pro 芯片，2025 年 12 月拍摄），用于示意可在笔记本电脑上运行，不是 Thinking Machines 演示中使用的 MacBook Pro（官方演示标注为 M5 Pro、48GB），也不是该模型的产品界面。图片来源：AzureSaturn / <a href="https://commons.wikimedia.org/wiki/File:MacBook_Pro_(16-inch,_M4_Pro,_Silver).jpg">维基共享资源</a>，作者本人作品，以 <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.zh">CC0</a> 发布（放弃版权，可自由使用）。本站缩小至 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>Thinking Machines Lab 于 2026 年 11 月 20 日发布博文《Introducing Inkling 2 Mini》，宣布推出 Inkling 2 Mini，并称这是一个足够快、足够强、小到可以在笔记本电脑上运行的模型。文章写道，Inkling 2 Mini 是循环 Transformer（looped transformer），对每个 token 会把模型的中间层运行三次，从而让模型在更少的 token 中进行更多推理并得到正确答案，尤其是在依赖推理质量的代理式编程等任务上。</p>
+    <blockquote class="pull">我们今天发布 Inkling 2 Mini，这是一个足够快、足够强、小到可以在笔记本电脑上运行的模型。</blockquote>
+    <p>该博文称，Inkling 2 Mini 是混合专家（Mixture-of-Experts）模型，总参数为 264 亿，激活参数为 34 亿，计入循环后每 token 的权重激活为 54 亿。文章写明，该模型大部分权重以 NVFP4 原生训练并部署，最后四层为 MXFP8；总显存占用约 20GB，因而可以在消费级笔记本电脑和桌面人工智能电脑等本地设备上运行。文章还写道，其研究人员曾在航班上于离线状态下，在一台 MacBook Pro 上运行 Inkling 2 Mini，并在几分钟内做出了一个可玩的飞行模拟器；配图说明标注演示所用设备为 MacBook Pro（M5 Pro，48GB），且处于飞行模式。</p>
+    <p>在评测方面，该博文称，Inkling 2 Mini 在 DeepSWE v1.1（48.2%）和 Vals Index v2.2（46.5%）等基准上，领先所有总参数不足 1000 亿的开源权重模型。文中对照表还列出：Artificial Analysis Intelligence Index v5.0 为 20.1，与表中的 Qwen3.8-27B 并列该行最高；SWE-bench Pro v2（Hard，mini-swe-agent v2.4.6）为 77.9%。文章并称，Inkling 2 Mini 已开放权重，即日起可在 Tinker 上进行推理与定制。文中同时发布了一个供监测性研究使用的可变循环（variable-loop）变体，并写明：该变体在无思维链（no-CoT）条件下的时间跨度，从一遍时的 16 秒提高到三遍时的 37 秒；在一项串行推理基准上的表现一直提高到十次循环——相当于其训练循环次数的两倍。文章把这项监测性实验结果归于该可变循环变体，而不是默认三次循环的 Inkling 2 Mini 发布配置。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://thinkingmachines.ai/news/inkling-2-mini/">Thinking Machines Lab：Introducing Inkling 2 Mini（2026-11-20）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。参数量、显存占用、循环结构、开放权重与 Tinker 提供方式，以及 DeepSWE v1.1、Vals Index v2.2 等公司自行公布的基准数字，均转述 Thinking Machines Lab 11 月 20 日官方博文。可变循环变体的时间跨度与十次循环实验结果，按原文归属于该研究变体。演示所用 MacBook Pro 的芯片与内存配置以原文说明为准。</p>
+</main>
+  </div>
+</body>
+</html>

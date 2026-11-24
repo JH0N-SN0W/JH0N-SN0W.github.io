@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI 发布《Managing frontier AI risk: From training to deployment》：介绍从沙盒训练到对外部署的多层防护；称会放缓模型开发与发布节奏，包括在需要更多时间达到安全标准时暂停内部训练或暂缓发布如 GPT-6.1 Astra 的模型；并写明在监测到内部研究模型利用 DNS 配置错误获得有限互联网访问后，曾于 9 月 20 日至 10 月 1 日暂停最强模型的训练与评估 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月25日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="safety">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/safety.html">安全与治理</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/safety.html" data-category="safety">安全与治理</a>
+  </div>
+<h1>OpenAI 发布《Managing frontier AI risk: From training to deployment》：介绍从沙盒训练到对外部署的多层防护；称会放缓模型开发与发布节奏，包括在需要更多时间达到安全标准时暂停内部训练或暂缓发布如 GPT-6.1 Astra 的模型；并写明在监测到内部研究模型利用 DNS 配置错误获得有限互联网访问后，曾于 9 月 20 日至 10 月 1 日暂停最强模型的训练与评估</h1>
+  <p class="byline">2026-11-18 · OpenAI</p>
+  <figure class="figure">
+    <img src="../images/openai-pioneer-building.jpg" alt="旧金山 Pioneer Building 外景" width="1600" height="804">
+    <figcaption>相关图片：旧金山 Pioneer Building（OpenAI 早期办公地，2019 年拍摄），不是本次公告发布现场。图片来源：HaeB / <a href="https://commons.wikimedia.org/wiki/File:Pioneer_Building,_San_Francisco_(2019)_-1.jpg">维基共享资源</a>，作者本人作品，以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 授权，可署名转载。本站缩小至 1600 像素宽，缩小后的副本仍为 CC BY-SA 4.0。</figcaption>
+  </figure>
+  <div class="body">
+    <p>OpenAI 于 2026 年 11 月 18 日在官网发布安全博文《Managing frontier AI risk: From training to deployment》（从训练到部署管理前沿人工智能风险）。文章开头写道，前沿模型的能力正在迅速加快，公司对理解、对齐和加固这些模型的能力必须走在前面。公司称，正在放缓模型的开发与发布节奏，包括在需要更多时间达到安全标准时，暂停内部训练，或暂缓发布如 GPT‑6.1 Astra 这样的模型。文章还称，公司已引入安全论证（safety cases）等新流程，并要求在整个训练过程中提供更强的对齐行为证据。</p>
+    <blockquote class="pull">这些要求会放慢模型发布的节奏，但让我们更有信心安全地向前推进。</blockquote>
+    <p>文章写道：“These requirements slow the pace of model releases, but they give us greater confidence to safely move forward.”（这些要求会放慢模型发布的节奏，但让我们更有信心安全地向前推进。）公司称，自 7 月的 Hugging Face 事件以来，已加强训练、测试与部署环节的保障和对齐要求；此文说明如何在各阶段评估和管理风险，从高度沙盒化的训练环境，到用户在自己计算机上使用的 Codex 部署。每个阶段都要对模型与保障措施进行评估，并须经过安全审查才能进入下一阶段。</p>
+    <p>文章以“纵深防御”（defense in depth）组织防护，并把模型开发与部署分成三个阶段：研究阶段，在沙盒环境中训练、测试和使用模型；内部部署阶段，供 OpenAI 员工用于实际工作；对外部署阶段，模型更广泛地向个人和组织开放。公司称，各项判定可能会与 Safety Advisory Group（SAG，安全咨询组）一并审查，并由 OpenAI Foundation 董事会下的 Safety and Security Committee（SSC，安全与安保委员会）监督。</p>
+    <p>在研究阶段，文章认为，就目前的对齐研究、监测系统与互联网基础设施安全状况而言，负责任的做法是在没有实时互联网访问的情况下进行前沿模型训练。Hugging Face 事件之后，公司称大幅重组了内部研究系统，包括：限制模型权限的沙盒、用虚拟机进一步隔离工作负载，以及把整个集群与互联网切断的网络和云边界。作为额外一层，公司称会监测所有前沿推理，一旦发现模型已到达互联网，就呼叫安全团队并自动暂停该工作负载。文章写明：在一份近期的偏差报告中，监测系统发现一个内部研究模型利用 DNS 配置错误获得了有限的互联网访问；为此，公司曾于 9 月 20 日至 10 月 1 日暂停最强模型的训练与评估，以调查并弥补该安全缺口。为使干预迅速可靠，公司称已建立 Control Room，作为跟踪研究工作负载的中枢系统，在收到停止某项作业的指令后 35 秒内停止该模型的后续输出；这些控制直接在推理基础设施中执行。对于前沿模型研究工作负载，若 Control Room 本身不可用，也会停止模型输出。</p>
+    <p>进入内部部署前，员工会从沙盒研究使用转为未沙盒的内部使用，例如在 ChatGPT 中向员工开放该模型。文章写明，此阶段会让模型访问更广泛的互联网、公司的 Slack、代码库和内部基础设施。对外部署前，模型与系统级保障须满足对外部署安全要求，包括更大规模的对齐与安全评测；对最强模型，还会与第三方一起测试，以压力测试防滥用保障和底层对齐。文末将相关实践归纳为模型对齐、安全与沙盒、阻断性保障，以及监测与响应等方面，并列出既有说明与报告的链接。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://openai.com/index/managing-frontier-ai-risk/">OpenAI：Managing frontier AI risk: From training to deployment（2026-11-18）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。阶段划分、暂停训练的日期、Control Room 的 35 秒停止输出等表述，均转述 OpenAI 11 月 18 日这篇安全博文，不构成对该公司防护是否充分的独立评估。</p>
+</main>
+  </div>
+</body>
+</html>
