@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>亚马逊威胁情报发布调查：称一个与中国有关联的威胁行为者使用开源自主渗透测试框架 Cairn 的人工智能代理，仅给出「obtain shell access」这一目标，便在约 11 分钟内发现并利用开源医学影像标注应用 MONAI Label 的零日路径遍历漏洞，随后获得服务器 root 权限；Amazon Threat Intelligence 对零日判断为高置信度，对中国关联判断为中等置信度 — Altaimobi今日早报</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-top">
+    <div class="toprule"></div>
+    <div class="wrap">
+      <header class="mast">
+        <div class="mast-inner">
+          <div class="brand">
+            <p class="kicker">摘记 · 不是官方媒体</p>
+            <h1><a href="../index.html">Altaimobi今日早报</a></h1>
+            <p class="dateline">2026年11月25日</p>
+          </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a> <a href="../categories/index.html">分类</a> <a href="../archive/index.html">月份存档</a> <a href="../about.html">关于</a>
+      </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+<main class="article" data-category="safety">
+  <div class="crumb-row">
+    <a class="crumb" href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <a class="crumb" href="../categories/safety.html">安全与治理</a>
+    <span class="sep">/</span>
+    <span>正文</span>
+  </div>
+  <div class="article-meta">
+    <a class="cat-pill" href="../categories/safety.html" data-category="safety">安全与治理</a>
+  </div>
+<h1>亚马逊威胁情报发布调查：称一个与中国有关联的威胁行为者使用开源自主渗透测试框架 Cairn 的人工智能代理，仅给出「obtain shell access」这一目标，便在约 11 分钟内发现并利用开源医学影像标注应用 MONAI Label 的零日路径遍历漏洞，随后获得服务器 root 权限；Amazon Threat Intelligence 对零日判断为高置信度，对中国关联判断为中等置信度</h1>
+  <p class="byline">2026-11-20 · AWS Security Blog / Project-MONAI GitHub Security Advisory</p>
+  <figure class="figure">
+    <img src="../images/nci-scientist-laboratory-2005.jpg" alt="美国国家癌症研究所实验室中工作的科研人员" width="1600" height="1393">
+    <figcaption>相关图片：美国国家癌症研究所实验室中工作的科研人员（约 2005 年资料），用于衬托医学影像与实验室软件这一主题，不是本次调查所涉大学服务器、漏洞利用或咨询发布现场。图片来源：Bill Branson / 美国国家癌症研究所 / <a href="https://commons.wikimedia.org/wiki/File:Scientist_working_in_laboratory.jpg">维基共享资源</a>，美国联邦政府作品，公有领域。本站缩小至约 1600 像素宽。</figcaption>
+  </figure>
+  <div class="body">
+    <p>亚马逊威胁情报（Amazon Threat Intelligence）于 2026 年 11 月 20 日在 AWS Security Blog 发布由 Amazon 综合安全首席信息安全官 CJ Moses 署名的调查文章，标题为《Chinese-nexus actor’s Cairn AI agents found a zero-day on their own》。文章写道，该团队调查了一个与中国有关联的威胁行为者使用自主人工智能代理、在最少人工介入下开展黑客行动的案例。行为者给这些代理的目标表述很简单：「obtain shell access。」在此次行动中，这些代理发现了某个开源应用中的零日漏洞，并用以取得一台服务器的完全控制权。文章称，这些发现表明代理式进攻行动已经在发生，防御方应为这类工具带来的速度与持续性做好准备。</p>
+    <blockquote class="pull">在约 11 分钟内，这些代理从摸清该应用的 API，推进到可在服务器上任意写入文件。</blockquote>
+    <p>文章写明，2026 年 9 月 10 日，亚马逊威胁情报发现一台公开托管、且未启用身份验证的 Cairn 实例。Cairn 是一个开源的自主人工智能渗透测试框架。由于运营者把该服务器公开暴露在互联网上，平台的操作历史——包括项目配置、行为者提示和人工智能输出——对任何人都可见。文章称，运营者用简体中文写提示，所执行脚本中的时间戳被配置为中国标准时间。对该实例的分析显示，一场大约历时 48 小时、自 2026 年 9 月 8 日开始的行动，目标是与中国大陆以外东亚地区大学相关的 IP 地址。</p>
+    <p>文章介绍，Cairn 原本是为防御方设计的研究与问题求解引擎：给定起点和用自然语言描述的目标，它会协调多个人工智能代理寻找达成目标的路径。此次行动中，行为者提供了目标 IP 地址列表，以及「obtain shell access」这一目标的多种表述；据此，这些代理自行规划、执行，并随着了解情况调整方法，而无需运营者选择每一步。文章还列举了未成功的行动：针对一所大学中未启用身份验证的 Redis 实例，代理在约 16 小时内连续执行了 148 个步骤，尝试了包括滥用复制功能加载未授权代码、逃逸脚本沙箱、写入配置文件和破坏内存等已知手法，并曾对同一系统上的另一服务尝试 Log4Shell 注入，同时通过共存的 Qdrant 实例中的服务端请求伪造（SSRF）映射内部 Docker 网络，再对 PostgreSQL、SSH 等服务发起凭证喷洒，但都没有得手。另一场行动持续超过 6 小时，目标是一所大学的 GPU 服务器：代理先从该校公开信息中整理出约 80 个真实用户名，再对远程登录（SSH）以及校内其他系统测试了超过 3 万组凭证组合，始终没有找到可用登录。</p>
+    <p>文章称，针对一台运行开源医学影像人工智能应用的目标，结果不同。这些代理识别了该应用的框架、摸清其 API 端点，并发现一个带有文件名参数的上传端点；它们测试该参数是否存在路径遍历，而该参数确实存在漏洞。「在约 11 分钟内，这些代理从摸清该应用的 API，推进到可在服务器上任意写入文件。」在之后的一次会话中，这些代理利用同一漏洞，把一个 Python 反向 shell 载荷写入 sitecustomize.py（Python 在解释器启动时会自动导入的文件），再触发一个训练 API 端点以启动新的 Python 进程；新进程导入该载荷，并建立以 root 运行的反向 shell。文章写明，发现当时，这一路径遍历漏洞尚未对应任何已发布的安全公告，也未经修补。Amazon Threat Intelligence 以高置信度将其评估为零日，依据是受影响的开源项目在漏洞数据库中当时没有相应修复、议题、公告或此前记载。文章还写明，发现该零日之后，威胁行为者介入，向代理提供了一条进入第二所大学网络的代理隧道，并指示它们利用该隧道攻击该网络中的其他机器；亚马逊称，隧道所连接的服务器运行着同一存在漏洞的软件，并据此推断行为者已利用该零日侵入并建立隧道。</p>
+    <p>在归因方面，Amazon Threat Intelligence 以中等置信度评估，这是一个与中国有关联的威胁行为者，依据是简体中文提示、中国标准时间的脚本时间戳，以及所针对大学可能符合中方战略关切。文章写明，亚马逊威胁情报已通知该项目维护者，维护者发布了修复并发布了 GitHub Security Advisory；受影响机构并非 AWS 客户，亚马逊没有直接通知路径，因而与一家政府合作方共同完成通知。</p>
+    <p>Project-MONAI 在 MONAI Label 仓库发布的安全公告 GHSA-qc22-rmgc-vg94（2026 年 11 月 18 日，发布者 ericspod）将问题概括为：数据存储上传端点中的路径遍历可导致任意文件写入。公告写明，该问题最初由 @aws-sec-vdp 在 MONAI 仓库的安全公告中报告，已在 pull request #1915 中修复，并在正确的仓库中重新报告以生成 CVE。受影响版本为 0.8.5 及更早版本；在该公告发布时，已修复版本一栏为 None，并写明修复将包含在下一个 MONAI Label 发行版中。公告还写明，默认情况下身份验证是关闭的（MONAI_LABEL_AUTH_ENABLE=False），因此在默认配置下，任何能够网络访问该服务器的客户端都可能利用该问题。公告建议的临时措施包括：启用身份验证且不要向不可信用户授予 ANNOTATOR 角色；不要把 MONAI Label 服务器暴露在不可信网络中；以非特权用户运行，并将其写权限限制在数据存储目录。本站只转述上述已公开结论，不转写可复现的利用步骤或示例路径。</p>
+  </div>
+  <div class="sources">
+    <p class="section">来源</p>
+    <ul>
+      <li><a href="https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/">AWS Security Blog：Chinese-nexus actor’s Cairn AI agents found a zero-day on their own（CJ Moses，2026-11-20）</a></li>
+      <li><a href="https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94">Project-MONAI / MONAILabel GitHub Security Advisory GHSA-qc22-rmgc-vg94：Path traversal in datastore upload endpoints allows arbitrary file write（2026-11-18）</a></li>
+    </ul>
+  </div>
+  <p class="foot">摘记，不是官方媒体。Cairn 名称、行动时间、约 11 分钟、root 权限、未成功的 Redis 与 GPU 服务器行动，以及高置信度零日判断、中等置信度中国关联判断，均转述 11 月 20 日 AWS Security Blog。MONAI Label 名称、受影响版本、尚未发布含修复的正式版本，以及临时缓解建议，均转述 Project-MONAI 于 11 月 18 日发布的 GitHub Security Advisory（该公告写明最初由 @aws-sec-vdp 报告）。本站不转写可复现的利用步骤。</p>
+</main>
+  </div>
+</body>
+</html>
